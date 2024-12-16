@@ -7,10 +7,13 @@
 
 :root {
     --color-primary-orange: rgb(255,122,0);
+    --color-primary-orange-light: rgb(255, 139, 31);
     --border-radius-small: 2px;
     --border-radius-medium: 4px;
     --border-radius-big: 8px;
 }
+
+/* Navigation header */
 
 header {
     position: absolute;
@@ -38,7 +41,15 @@ header {
     border: none;
     border-radius: var(--border-radius-medium);
     font-weight: 500;
+    transition: all .3s ease-in-out;
 }
+
+.btns button:hover {
+    cursor: pointer;
+    background-color: var(--color-primary-orange-light);
+}
+
+/* Navigation header END */
 
 main {
     height: 100vh;
