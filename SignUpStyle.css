@@ -5,7 +5,14 @@
 }
 
 #signupForm {
-  background-color: bisque;
+  background-color: hsl(45, 12%, 94%);
+  width: fit-content;
+  margin: 3em auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+  border: none;
 }
 
 #signupForm label {
@@ -23,6 +30,7 @@ input {
   font-size: 18px;
   border: none;
   height: 1.5em;
+  width: 20rem;
 
   box-shadow: 0 0 5px hsl(0, 1%, 60%);
 }
