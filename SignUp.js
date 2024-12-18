@@ -8,7 +8,7 @@ const emailField = document.getElementById("email");
 const passwordField = document.getElementById("password");
 const confirmPasswordField = document.getElementById("confirmPassword");
 const recoveryEmailField = document.getElementById("RecoveryEmail");
-
+const formInputs = document.querySelectorAll("input")
 
 // Function to create and add the toggle icon
 function addToggleIcon(field) {
@@ -49,16 +49,31 @@ function togglePasswordVisibility(field, tg) {
   }
 }
 
-// Add focus event listener to the password field
-passwordField.addEventListener("focus", function() {addToggleIcon(this)}) // Using arrow function so that function doesn't execute immediately
-confirmPasswordField.addEventListener("focus", function() {addToggleIcon(this)});
+// Event Listener
+passwordField.addEventListener("keydown", function() {addToggleIcon(this)});
+confirmPasswordField.addEventListener("keydown", function() {addToggleIcon(this)});
 
 
 function validCredential(){
+  for (const input of formInputs) {
+    if (input.value === "") {
+      alert("All input fields must be filled");
+      break; // Exit the loop
+    }
+  }
+
+  
 
 }
 
 signUpBtn.addEventListener("click", (event) => {
     console.log("Account created successfully")
+    validCredential();
+    // console.log(`Username : ${usernameField.value}`)
+    // console.log(`Contact No : ${contactField.value}`)
+    // console.log(`Email: ${emailField.value}`)
+    // console.log(`Password: ${passwordField.value}`)
+    // console.log(`Confirm Password: ${confirmPasswordField.value}`)
+    // console.log(`Recovery Email: ${recoveryEmailField.value}`)
     event.preventDefault()
 })
