@@ -13,26 +13,26 @@
 
 fieldset {
   border: none;
-}
-
-#signupForm label {
-  display: block;
-  margin-top: 20px;
-}
-
-#signupForm label:first-of-type {
-  display: block;
-  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
 }
 
 input {
   padding: 3px 10px;
   font-size: 18px;
   border: none;
+  border-radius: 10px;
+  /* max-width: 17rem; */
   height: 1.5em;
   width: 20rem;
+  height: 32px;
 
   box-shadow: 0 0 5px hsl(0, 1%, 60%);
+}
+
+input:first-of-type {
+  margin-top: 24px;
 }
 
 img {
@@ -50,13 +50,12 @@ img:hover {
 }
 
 #submit {
+  border-radius: 10px;
   background-color: #00916e;
   border: none;
   box-shadow: 0 0 5px black;
   color: hsl(204, 12%, 92%);
 
-  margin-top: 12px;
-  margin-bottom: 10px;
   display: block;
   padding: 10px;
   font-size: 17px;
