@@ -1,7 +1,13 @@
-const passwordField = document.getElementById("password");
-const confirmPasswordField = document.getElementById("confirmPassword");
+// Getting HTML element
 const form = document.getElementById("signupForm");
 const signUpBtn = document.querySelector("button")
+
+const usernameField = document.getElementById("username");
+const contactField = document.getElementById("contactNo");
+const emailField = document.getElementById("email");
+const passwordField = document.getElementById("password");
+const confirmPasswordField = document.getElementById("confirmPassword");
+const recoveryEmailField = document.getElementById("RecoveryEmail");
 
 
 // Function to create and add the toggle icon
@@ -47,6 +53,10 @@ function togglePasswordVisibility(field, tg) {
 passwordField.addEventListener("focus", function() {addToggleIcon(this)}) // Using arrow function so that function doesn't execute immediately
 confirmPasswordField.addEventListener("focus", function() {addToggleIcon(this)});
 
+
+function validCredential(){
+
+}
 
 signUpBtn.addEventListener("click", (event) => {
     console.log("Account created successfully")
