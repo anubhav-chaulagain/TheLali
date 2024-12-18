@@ -17,36 +17,39 @@ function addToggleIcon(field) {
   // Check if the icon already exists to avoid duplicates
   if (field.parentNode.querySelector(".togglePassword")) return;
 
-//   // Create the <i> element
   const toggleIcon = document.createElement("i");
   toggleIcon.classList.add("togglePassword");
 
-  // Add an <img> inside the <i> element
   const lbl = document.createElement("label")
   const img = document.createElement("img");
   img.src = "icons/see.png"; 
   img.alt = "Toggle Password Visibility";
 
-  // Append the image to the <i> element
   toggleIcon.appendChild(img);
 
   // Add the click event listener to toggle password visibility
   toggleIcon.addEventListener("click", function() {togglePasswordVisibility(field,this)});
-
-  // Insert the icon after the password field
   field.parentNode.insertBefore(toggleIcon, field.nextElementSibling)
 }
 
 // Function to toggle password visibility
 function togglePasswordVisibility(field, tg) {
-  if (field.type === "password") {
-    field.type = "text";
-    console.log(tg.querySelector('img'))
-    tg.querySelector("img").src = "icons/closed-eye.png" 
-  } else {
-    field.type = "password";
-    tg.querySelector("img").src = "icons/see.png" 
-  }
+  const img = tg.querySelector("img");
+  img.style.transition = "opacity 0.5s";
+  img.style.opacity = 0.5;
+
+  // Wait for the fade-out to complete, then change the image source
+  setTimeout(() => {
+    if (field.type === "password") {
+      field.type = "text";
+      img.src = "icons/closed-eye.png";
+    } else {
+      field.type = "password";
+      img.src = "icons/see.png";
+    }
+    // Fade in the new image
+    img.style.opacity = 1;
+  }, 200); 
 }
 
 // Event Listener
@@ -62,7 +65,9 @@ function validCredential(){
     }
   }
 
-  
+  if (passwordField.value != confirmPasswordField.value) {
+    alert("Password and Confirm password field are not same")
+  }  
 
 }
 
