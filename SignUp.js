@@ -65,8 +65,21 @@ function validCredential(){
     }
   }
 
+  if (!emailField.value.includes("@gmail.com")) {
+    alert("Email is not valid")
+  }
+
+  if (!recoveryEmailField.value.includes("@gmail.com")) {
+    alert("Recovery Email is not valid")
+  }
+
+  if (recoveryEmailField.value == emailField.value) {
+    alert("Email and Recovery email cannot be same")
+  }
+
   if (passwordField.value != confirmPasswordField.value) {
     alert("Password and Confirm password field are not same")
+    return
   }  
 
 }
@@ -74,11 +87,5 @@ function validCredential(){
 signUpBtn.addEventListener("click", (event) => {
     console.log("Account created successfully")
     validCredential();
-    // console.log(`Username : ${usernameField.value}`)
-    // console.log(`Contact No : ${contactField.value}`)
-    // console.log(`Email: ${emailField.value}`)
-    // console.log(`Password: ${passwordField.value}`)
-    // console.log(`Confirm Password: ${confirmPasswordField.value}`)
-    // console.log(`Recovery Email: ${recoveryEmailField.value}`)
     event.preventDefault()
 })
