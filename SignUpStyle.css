@@ -2,6 +2,9 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
 }
 
 #signupForm {
@@ -13,9 +16,9 @@
 
 fieldset {
   border: none;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 23px; */
 }
 
 input {
@@ -38,7 +41,8 @@ input:first-of-type {
 img {
   height: 20px;
   margin-left: -32px;
-  margin-bottom: -5px;
+  margin-bottom: -15px;
+  transition: all 1s;
 }
 
 img:hover {
@@ -49,6 +53,22 @@ img:hover {
   display: flex;
 }
 
+p {
+  display: flex;
+  align-items: center; /* Align the input vertically */
+  height: 38px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 30px;
+}
+/* div.p {
+  margin: 0;
+  height: fit-content;
+} */
+
 #submit {
   border-radius: 10px;
   background-color: #00916e;
@@ -57,8 +77,9 @@ img:hover {
   color: hsl(204, 12%, 92%);
 
   display: block;
-  padding: 10px;
+  padding: 8px;
   font-size: 17px;
+  width: 100%;
 }
 
 #submit:hover {
