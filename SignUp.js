@@ -58,25 +58,33 @@ confirmPasswordField.addEventListener("keydown", function() {addToggleIcon(this)
 
 
 function validCredential(){
+  // Check for empty fields
   for (const input of formInputs) {
     if (input.value === "") {
       alert("All input fields must be filled");
-      break; // Exit the loop
+      return; 
     }
   }
 
+  // Check for valid email
   if (!emailField.value.includes("@gmail.com")) {
     alert("Email is not valid")
+    return
   }
 
+  // Check for valid recovery email
   if (!recoveryEmailField.value.includes("@gmail.com")) {
     alert("Recovery Email is not valid")
+    return
   }
 
+  // Check if email and recovery email are same
   if (recoveryEmailField.value == emailField.value) {
     alert("Email and Recovery email cannot be same")
+    return
   }
 
+  // Check if password and confirm password are same
   if (passwordField.value != confirmPasswordField.value) {
     alert("Password and Confirm password field are not same")
     return
