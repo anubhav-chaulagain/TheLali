@@ -60,9 +60,47 @@ header {
 
 /* Navigation header END */
 
+/* Hero Section */
+
+#hero {
+    background-size: cover;
+    min-height: 100dvh;
+    position: relative;
+}
+
+#scene-wrapper {
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    pointer-events: none;
+}
+
+div[id*='scene-bg-'] {
+    background-repeat: none;
+    background-size: cover;
+    background-position: bottom center;
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#scene-bg-1 { background-image: url(svgs/background.svg);}
+#scene-bg-2 { background-image: url(svgs/backWave.svg);}
+#scene-bg-3 { background-image: url(svgs/frontWave.svg);}
+#scene-bg-4 { background-image: url(svgs/building.svg);}
+
+
+
+/* Hero Section END */
+
+/* Body Start */
+
 main {
     height: 100vh;
-    background-image: url(/assets/images/house-landing-page.jpg);
+    /* background-image: url(/assets/images/house-landing-page.jpg); */
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: right;
@@ -85,3 +123,5 @@ main {
     font-weight: 700;
     color: var(--color-primary-orange);
 }
+
+/* Body Start END*/
