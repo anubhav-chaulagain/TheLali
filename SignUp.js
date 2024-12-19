@@ -9,6 +9,9 @@ const passwordField = document.getElementById("password");
 const confirmPasswordField = document.getElementById("confirmPassword");
 const recoveryEmailField = document.getElementById("RecoveryEmail");
 const formInputs = document.querySelectorAll("input")
+const city = document.getElementById("city")
+const remember = document.getElementById("remember")
+
 
 // Function to create and add the toggle icon
 function addToggleIcon(field) {
@@ -56,7 +59,7 @@ function togglePasswordVisibility(field, tg) {
 passwordField.addEventListener("keydown", function() {addToggleIcon(this)});
 confirmPasswordField.addEventListener("keydown", function() {addToggleIcon(this)});
 
-
+// Function to validate Credentials
 function validCredential(){
   // Check for empty fields
   for (const input of formInputs) {
@@ -92,8 +95,18 @@ function validCredential(){
 
 }
 
+// Sign UP button action
 signUpBtn.addEventListener("click", (event) => {
     console.log("Account created successfully")
-    validCredential();
+    // validCredential();
+    console.log(city.value)
+    if (remember.checked) {
+      console.log("Password will be saved");
+      // Code to save credentials in database
+    }
+    formInputs.forEach(input => {
+      input.value = ""
+    })
+    remember.checked = false;
     event.preventDefault()
 })
