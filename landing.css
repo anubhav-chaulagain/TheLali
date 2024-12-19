@@ -89,3 +89,8 @@ main {
 }
 
 /* Body Start END*/
+
+/* Type writer effect */
+.slogan #cursor {
+    font-family: "Quicksand";
+}
