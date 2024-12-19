@@ -2,12 +2,23 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box; */
+  color: var(--color-text);
+}
+
+:root {
+  --color-primary-orange: rgb(255, 122, 0);
+  --color-primary-orange-light: rgb(255, 139, 31);
+
+  --color-text: rgb(74, 74, 74);
+  --color-text-hover: black;
+
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-big: 8px;
 }
 
 #signupForm {
+  border-radius: var(--border-radius-big);
   background-color: hsl(45, 12%, 94%);
   width: fit-content;
   margin: 4.5em auto;
@@ -16,20 +27,18 @@
 
 fieldset {
   border: none;
-  /* display: flex;
-  flex-direction: column;
-  gap: 23px; */
 }
 
 input {
   padding: 3px 10px;
   font-size: 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius-big);
   /* max-width: 17rem; */
   height: 1.5em;
   width: 20rem;
   height: 32px;
+  color: var(--color-text-hover);
 
   box-shadow: 0 0 5px hsl(0, 1%, 60%);
 }
@@ -61,17 +70,9 @@ p {
   margin-top: 0;
 }
 
-p:last-of-type {
-  margin-bottom: 30px;
-}
-/* div.p {
-  margin: 0;
-  height: fit-content;
-} */
-
 #submit {
-  border-radius: 10px;
-  background-color: #00916e;
+  border-radius: var(--border-radius-big);
+  background-color: var(--color-primary-orange-light);
   border: none;
   box-shadow: 0 0 5px black;
   color: hsl(204, 12%, 92%);
@@ -94,6 +95,24 @@ p:last-of-type {
 a {
   font-size: 0.8em;
   text-decoration: none;
-  color: hsl(225, 46%, 52%);
   margin-left: 9px;
+}
+
+a:hover {
+  color: var(--color-text-hover);
+}
+
+#city {
+  margin-left: 12px;
+  padding: 5px;
+  color: var(--color-text);
+}
+
+#remember {
+  width: fit-content;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  margin-top: 4px;
+  margin-right: 10px;
 }
