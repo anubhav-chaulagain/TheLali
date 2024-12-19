@@ -8,6 +8,10 @@
 :root {
     --color-primary-orange: rgb(255,122,0);
     --color-primary-orange-light: rgb(255, 139, 31);
+
+    --color-text: rgb(74, 74, 74);
+    --color-text-hover: black;
+    
     --border-radius-small: 2px;
     --border-radius-medium: 4px;
     --border-radius-big: 8px;
