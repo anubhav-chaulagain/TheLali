@@ -31,11 +31,27 @@ header {
     font-weight: bold;
     font-size: 1.5rem;
     transition: all .3s ease-in-out;
+    display: inline-flex;
+    gap: 3px;
 }
 
 #logo:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    gap: 10px;
+}
+
+#logo:hover #nep {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover #lali {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out 0.3s;
+}
+
+#lali {
+    margin-top: 3px;
 }
 
 .btns {
