@@ -1,16 +1,8 @@
 // Getting HTML element
 const form = document.getElementById("signupForm");
-const signUpBtn = document.querySelector("button")
-
-const usernameField = document.getElementById("username");
-const contactField = document.getElementById("contactNo");
-const emailField = document.getElementById("email");
 const passwordField = document.getElementById("password");
 const confirmPasswordField = document.getElementById("confirmPassword");
-const recoveryEmailField = document.getElementById("RecoveryEmail");
-const formInputs = document.querySelectorAll("input")
-const city = document.getElementById("city")
-const remember = document.getElementById("remember")
+
 
 
 // Function to create and add the toggle icon
@@ -59,54 +51,3 @@ function togglePasswordVisibility(field, tg) {
 passwordField.addEventListener("keydown", function() {addToggleIcon(this)});
 confirmPasswordField.addEventListener("keydown", function() {addToggleIcon(this)});
 
-// Function to validate Credentials
-function validCredential(){
-  // Check for empty fields
-  for (const input of formInputs) {
-    if (input.value === "") {
-      alert("All input fields must be filled");
-      return; 
-    }
-  }
-
-  // Check for valid email
-  if (!emailField.value.includes("@gmail.com")) {
-    alert("Email is not valid")
-    return
-  }
-
-  // Check for valid recovery email
-  if (!recoveryEmailField.value.includes("@gmail.com")) {
-    alert("Recovery Email is not valid")
-    return
-  }
-
-  // Check if email and recovery email are same
-  if (recoveryEmailField.value == emailField.value) {
-    alert("Email and Recovery email cannot be same")
-    return
-  }
-
-  // Check if password and confirm password are same
-  if (passwordField.value != confirmPasswordField.value) {
-    alert("Password and Confirm password field are not same")
-    return
-  }  
-
-}
-
-// Sign UP button action
-signUpBtn.addEventListener("click", (event) => {
-    console.log("Account created successfully")
-    validCredential();
-    console.log(city.value)
-    if (remember.checked) {
-      console.log("Password will be saved");
-      // Code to save credentials in database
-    }
-    formInputs.forEach(input => {
-      input.value = ""
-    })
-    remember.checked = false;
-    event.preventDefault()
-})
