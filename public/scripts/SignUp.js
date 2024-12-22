@@ -17,7 +17,7 @@ function addToggleIcon(field) {
 
   const lbl = document.createElement("label")
   const img = document.createElement("img");
-  img.src = "icons/see.png"; 
+  img.src = "../../assets/icons/see.png"; 
   img.alt = "Toggle Password Visibility";
 
   toggleIcon.appendChild(img);

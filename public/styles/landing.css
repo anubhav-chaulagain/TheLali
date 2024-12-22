@@ -80,7 +80,7 @@ header {
 
 main {
     height: 100vh;
-    background-image: url(/assets/images/house-landing-page.jpg);
+    background-image: url(../../assets/images/house-landing-page.jpg);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: right;
