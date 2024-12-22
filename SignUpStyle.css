@@ -1,0 +1,124 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+:root {
+  --color-primary-orange: rgb(255, 122, 0);
+  --color-primary-orange-light: rgb(255, 139, 31);
+
+  --color-text: rgb(74, 74, 74);
+  --color-text-hover: black;
+
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-big: 8px;
+}
+
+#signupForm {
+  border-radius: var(--border-radius-big);
+  background-color: hsl(45, 12%, 94%);
+  width: fit-content;
+  margin: 2em auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+  border: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+input {
+  padding: 3px 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: var(--border-radius-big);
+  /* max-width: 17rem; */
+  height: 1.5em;
+  width: 20rem;
+  height: 32px;
+  color: var(--color-text-hover);
+
+  box-shadow: 0 0 5px hsl(0, 1%, 60%);
+}
+
+input:first-of-type {
+  margin-top: 24px;
+}
+
+img {
+  height: 20px;
+  margin-left: -32px;
+  margin-bottom: -15px;
+  transition: all 1s;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+#togglePassword {
+  display: flex;
+}
+
+p {
+  display: flex;
+  align-items: center; /* Align the input vertically */
+  height: 38px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+#submit {
+  border-radius: var(--border-radius-big);
+  background-color: var(--color-primary-orange-light);
+  border: none;
+  box-shadow: 0 0 5px black;
+  color: hsl(204, 12%, 92%);
+
+  display: block;
+  padding: 8px;
+  font-size: 17px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+#submit:hover {
+  cursor: pointer;
+}
+
+#submit:active {
+  box-shadow: none;
+}
+
+a {
+  font-size: 0.8em;
+  text-decoration: none;
+  margin-left: 9px;
+}
+
+a:hover {
+  color: var(--color-text-hover);
+}
+
+#city {
+  margin-left: 12px;
+  padding: 5px;
+  color: var(--color-text);
+}
+
+#remember {
+  width: fit-content;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  margin-top: 4px;
+  margin-right: 10px;
+}
