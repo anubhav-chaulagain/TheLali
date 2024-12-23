@@ -1,4 +1,4 @@
 # TheLali
 
 > A real estate website.
-> __ Under Development
+ _ _ Under Development
