@@ -1,0 +1,82 @@
+header {
+  background-color: bisque;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 13em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: 505;
+}
+
+.logo #nep {
+  margin-left: 10px;
+  margin-right: 4px;
+  font-size: 1.6rem;
+}
+
+.navigation-tools ul {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  font-weight: normal;
+}
+
+li {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 20px;
+  left: -25px;
+  z-index: 1;
+  padding-top: 20px;
+
+  min-width: 120px;
+  display: none;
+}
+
+li:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  background-color: hsl(150, 3%, 14%);
+  display: block;
+  text-decoration: none;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  padding: 10px;
+}
+
+.subDrop {
+  position: absolute;
+  left: 100%;
+  top: 20px;
+  height: 40px;
+  min-width: 100px;
+  padding: 10px;
+  background-color: hsl(150, 3%, 16%);
+  color: whitesmoke;
+  display: none;
+}
+
+a:hover .subDrop {
+  display: block;
+}
