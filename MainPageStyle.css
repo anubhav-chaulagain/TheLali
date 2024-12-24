@@ -65,3 +65,25 @@ a {
   border: 1px solid whitesmoke;
   padding: 10px;
 }
+
+.profile-container {
+  border: 2px solid black;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.profile-container .dropdown {
+  position: absolute;
+  top: 20px;
+  padding-top: 20px;
+  left: -75px;
+  z-index: 1;
+
+  min-width: 120px;
+  display: block;
+}
