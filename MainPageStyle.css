@@ -43,16 +43,17 @@ li {
 
 .dropdown-content {
   position: absolute;
-  top: 20px;
+  top: 15px;
+  padding-top: 25px;
   left: -25px;
   z-index: 1;
-  padding-top: 20px;
 
   min-width: 120px;
   display: none;
 }
 
-li:hover .dropdown-content {
+li:hover .dropdown-content,
+.profile-container:hover .dropdown {
   display: flex;
   flex-direction: column;
 }
@@ -79,11 +80,15 @@ a {
 
 .profile-container .dropdown {
   position: absolute;
-  top: 20px;
-  padding-top: 20px;
+  top: 15px;
+  padding-top: 25px;
   left: -75px;
   z-index: 1;
 
   min-width: 120px;
-  display: block;
+  display: none;
 }
+
+/* .profile-container:hover .dropdown {
+  display: none;
+} */
