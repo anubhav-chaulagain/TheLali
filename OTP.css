@@ -1,0 +1,62 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc); 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.input-field:focus {
+    outline: none;
+    color: #3b3b3b;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.button {
+    width: 100%;
+    padding: 10px;
+    background: #b53e1d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button:hover {
+    background: #d76b2c;
+
+}
+.success-message {
+    color: green;
+    font-size: 12px;
+    display: none;
+}
+.otp-sent {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
