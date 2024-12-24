@@ -64,19 +64,3 @@ a {
   border: 1px solid whitesmoke;
   padding: 10px;
 }
-
-.subDrop {
-  position: absolute;
-  left: 100%;
-  top: 20px;
-  height: 40px;
-  min-width: 100px;
-  padding: 10px;
-  background-color: hsl(150, 3%, 16%);
-  color: whitesmoke;
-  display: none;
-}
-
-a:hover .subDrop {
-  display: block;
-}
