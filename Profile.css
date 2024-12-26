@@ -26,11 +26,10 @@
 }
 
 #profile-details {
-  background-color: aquamarine;
+  background-color: rgb(152, 193, 228);
 }
 
 .form-element {
-  background-color: bisque;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
@@ -70,13 +69,15 @@ p label {
 #bottom-navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 10px;
   margin: 10px;
+  margin-top: 25px;
 }
 
 a {
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 button#save-profile {
@@ -88,12 +89,17 @@ button#save-profile {
 
   padding: 8px;
   font-size: 17px;
+  cursor: pointer;
+}
+
+button#save-profile:active {
+  box-shadow: none;
 }
 
 .profile-photo {
   background-color: aliceblue;
   width: fit-content;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
 .photos {
