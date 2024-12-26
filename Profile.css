@@ -1,0 +1,17 @@
+.profile-page-container {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+.profile-photo {
+  background-color: aliceblue;
+  width: fit-content;
+}
+
+#profile-details {
+  background-color: aquamarine;
+}
+.form-element {
+  background-color: bisque;
+}
