@@ -4,43 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
+    <link rel="stylesheet" href="Profile.css" />
   </head>
   <body>
     <div class="profile-page-container">
       <div class="profile-photo">asd</div>
-      <form>
+      <form id="profile-details">
         <h2>Profile Details</h2>
-        <p>
-          <label>Username: </label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-          />
-        </p>
-        <label>Email </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email@gmail.com"
-        />
+        <div class="form-element">
+          <p>
+            <label>Username: </label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+            />
+          </p>
 
-        <p>
-          <label>Phone: </label>
-          <input type="tel" name="phone" id="phone" placeholder="9876543210" />
-        </p>
+          <p>
+            <label>Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email@gmail.com"
+            />
+          </p>
 
-        <p>
-          <label for="address">Address</label>
-          <input
-            type="text"
-            name="address"
-            id="address"
-            placeholder="Kathmandu"
-          />
-        </p>
+          <p>
+            <label>Phone: </label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="9876543210"
+            />
+          </p>
+
+          <p>
+            <label for="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Kathmandu"
+            />
+          </p>
+        </div>
       </form>
     </div>
   </body>
