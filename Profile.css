@@ -68,3 +68,26 @@ p label {
 ::placeholder {
   color: hsl(0, 1%, 49%);
 }
+
+#bottom-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+button#save-profile {
+  background-color: var(--color-primary-orange-light);
+  border: none;
+  border-radius: var(--border-radius-big);
+  box-shadow: 0 0 5px hsl(0, 1%, 17%);
+  color: hsl(204, 12%, 92%);
+
+  padding: 8px;
+  font-size: 17px;
+}
