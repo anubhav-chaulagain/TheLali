@@ -20,6 +20,7 @@
 .profile-page-container {
   display: flex;
   margin: auto;
+  margin-top: 20vh;
   width: fit-content;
 }
 
@@ -40,7 +41,7 @@
   padding: 10px;
 }
 
-#profile-details h2 {
+h2 {
   font-size: 30px;
   margin: 5px;
 }
