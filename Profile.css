@@ -112,6 +112,7 @@ button#save-profile:active {
   height: 180px;
   border: 1px solid black;
   border-radius: 50%;
+  width: 180px;
 }
 
 .profile-photo input {
