@@ -24,11 +24,6 @@
   width: fit-content;
 }
 
-.profile-photo {
-  background-color: aliceblue;
-  width: fit-content;
-}
-
 #profile-details {
   background-color: aquamarine;
 }
@@ -91,4 +86,42 @@ button#save-profile {
 
   padding: 8px;
   font-size: 17px;
+}
+
+.profile-photo {
+  background-color: aliceblue;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+.profile-photo img {
+  height: 200px;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo input {
+  display: none;
+}
+
+.photos label {
+  background-color: var(--color-primary-orange-light);
+  border: none;
+  border-radius: var(--border-radius-big);
+  box-shadow: 0 0 5px hsl(0, 1%, 17%);
+  color: hsl(204, 12%, 92%);
+
+  padding: 8px;
+  font-size: 17px;
+  width: fit-content;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.photos label:active {
+  box-shadow: none;
 }
