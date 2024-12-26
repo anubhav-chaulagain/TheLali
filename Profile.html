@@ -12,7 +12,7 @@
         <h2>Profile Photo</h2>
 
         <div class="photos">
-          <img src="icons/profile.png" alt="Default Profile" />
+          <img src="icons/profile.png" alt="Default Profile" id="profile-pic" />
 
           <label for="profile-image">Update Image</label>
           <input
@@ -73,5 +73,14 @@
         </p>
       </form>
     </div>
+
+    <script>
+      const profilePic = document.getElementById("profile-pic");
+      const inputFile = document.getElementById("profile-image");
+
+      inputFile.onchange = function () {
+        profilePic.src = URL.createObjectURL(inputFile.files[0]);
+      };
+    </script>
   </body>
 </html>
