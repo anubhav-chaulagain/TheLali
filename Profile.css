@@ -47,6 +47,7 @@
 
 p label {
   margin-left: 3px;
+  color: hsl(120, 1%, 17%);
 }
 
 .form-element input {
@@ -65,5 +66,5 @@ p label {
 }
 
 ::placeholder {
-  color: var(--color-text);
+  color: hsl(0, 1%, 49%);
 }
