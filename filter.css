@@ -36,6 +36,10 @@
     display: block;
 }
 
+.type:hover button{
+    background-color: rgb(222, 222, 218);
+}
+
 .location button{
     background-color: white;
     padding:10px 15px;
@@ -60,6 +64,10 @@
     display: block;
 }
 
+.location:hover button{
+    background-color: rgb(222, 222, 218);
+}
+
 .price button{
     background-color: white;
     padding:10px 15px;
@@ -82,4 +90,8 @@
 }
 .price:hover .content-price{
     display: block;
+}
+
+.price:hover button{
+    background-color: rgb(222, 222, 218);
 }
