@@ -11,3 +11,26 @@
     color: #050505;
     
 }
+
+.type button{
+    background-color: white;
+    padding:10px 15px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+
+.location button{
+    background-color: white;
+    padding:10px 15px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+
+.price button{
+    background-color: white;
+    padding:10px 15px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
