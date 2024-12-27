@@ -39,6 +39,9 @@
 .type:hover button{
     background-color: rgb(222, 222, 218);
 }
+.type a:hover{
+    background-color:rgb(222, 222, 218) ;
+}
 
 .location button{
     background-color: white;
@@ -67,6 +70,9 @@
 .location:hover button{
     background-color: rgb(222, 222, 218);
 }
+.location a:hover{
+    background-color:rgb(222, 222, 218) ;
+}
 
 .price button{
     background-color: white;
@@ -94,4 +100,8 @@
 
 .price:hover button{
     background-color: rgb(222, 222, 218);
+}
+
+.price a:hover{
+    background-color:rgb(222, 222, 218) ;
 }
