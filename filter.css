@@ -1,0 +1,13 @@
+.filter {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.arrow {
+    font-size: 1rem; 
+    margin-left: 10px; 
+    color: #050505;
+    
+}
