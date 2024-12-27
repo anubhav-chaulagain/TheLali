@@ -18,7 +18,19 @@
     border: 1px solid gray;
     cursor: pointer;
 }
+.type a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
 
+.type .content-type{
+    
+    position: absolute;
+    background-color: rgb(236, 236, 233);
+    box-shadow: 2px 2px 5px(0,0,0,0.8);
+}
 
 .location button{
     background-color: white;
@@ -26,11 +38,37 @@
     border: 1px solid gray;
     cursor: pointer;
 }
+.location a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
 
+.location .content-location{
+    
+    position: absolute;
+    background-color: rgb(236, 236, 233);
+    box-shadow: 2px 2px 5px(0,0,0,0.8);
+}
 
 .price button{
     background-color: white;
     padding:10px 15px;
     border: 1px solid gray;
     cursor: pointer;
+}
+
+.price a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.price .content-price{
+    
+    position: absolute;
+    background-color: rgb(236, 236, 233);
+    box-shadow: 2px 2px 5px(0,0,0,0.8);
 }
