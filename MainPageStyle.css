@@ -39,6 +39,10 @@ header {
 li {
   position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 
 .dropdown-content {
@@ -52,8 +56,7 @@ li {
   display: none;
 }
 
-li:hover .dropdown-content,
-.profile-container:hover .dropdown {
+li:hover .dropdown-content {
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -64,19 +67,25 @@ a {
   display: block;
   text-decoration: none;
   color: whitesmoke;
-  border: 1px solid whitesmoke;
   padding: 10px;
 }
 
 .profile-container {
-  border: 2px solid black;
-  border-radius: 50%;
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+
+  width: fit-content;
+}
+
+.profile-container img {
   height: 40px;
   width: 40px;
-  position: relative;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .profile-container .dropdown {
@@ -88,6 +97,10 @@ a {
 
   min-width: 120px;
   display: none;
+}
+
+#profile-pic:hover .dropdown {
+  display: block;
 }
 
 .dropdown-content a:hover,
@@ -109,4 +122,14 @@ a {
 .logo:hover #lali {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out 0.3s;
+}
+
+img#sign {
+  height: 15px;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover #sign {
+  transform: rotate(180deg);
 }

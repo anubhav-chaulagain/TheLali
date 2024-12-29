@@ -23,6 +23,7 @@
   margin: auto;
   margin-top: 20vh;
   width: fit-content;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.747);
 }
 
 #profile-details {
@@ -72,7 +73,7 @@ p label {
   align-items: center;
   padding: 0 10px;
   margin: 10px;
-  margin-top: 25px;
+  margin-top: 38px;
 }
 
 a {
@@ -112,6 +113,7 @@ button#save-profile:active {
   height: 180px;
   border: 1px solid black;
   border-radius: 50%;
+  width: 180px;
 }
 
 .profile-photo input {
@@ -128,7 +130,7 @@ button#save-profile:active {
   padding: 8px;
   font-size: 17px;
   width: fit-content;
-  margin-top: 10px;
+  margin: 10px 0;
   cursor: pointer;
 }
 
