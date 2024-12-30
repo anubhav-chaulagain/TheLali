@@ -1,9 +1,11 @@
 .filter {
     display: flex;
+    justify-content: center;
     background-color: #ffffff;
     padding: 15px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 .arrow {
     font-size: 1rem; 
@@ -18,9 +20,16 @@
     border: 1px solid gray;
     cursor: pointer;
 }
+.type button,
+.location button,
+.price button,
+#search {
+    width: 150px;
+}
+
 .type a{
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
 }
@@ -41,6 +50,7 @@
 }
 .type a:hover{
     background-color:rgb(222, 222, 218) ;
+    color: black;
 }
 
 .location button{
@@ -51,7 +61,7 @@
 }
 .location a{
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
 }
@@ -72,6 +82,7 @@
 }
 .location a:hover{
     background-color:rgb(222, 222, 218) ;
+    color: black;
 }
 
 .price button{
@@ -83,7 +94,7 @@
 
 .price a{
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
 }
@@ -103,7 +114,8 @@
 }
 
 .price a:hover{
-    background-color:rgb(222, 222, 218) ;
+    background-color:rgb(222, 222, 218);
+    color: black;
 }
 
 #search{
