@@ -32,4 +32,8 @@ app.get('/profile', (req, res)=> {
     res.render('profile');
 })
 
+app.get('/main', (req, res)=>{
+    res.render('mainPage');
+})
+
 app.listen(3000);
