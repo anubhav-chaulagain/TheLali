@@ -1,0 +1,53 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary-orange: rgb(255, 122, 0);
+  --color-primary-orange-light: rgb(255, 139, 31);
+
+  --color-text: rgb(74, 74, 74);
+  --color-text-hover: black;
+
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-big: 8px;
+}
+
+#emiCalculator {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  background-color: aliceblue;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.input-fields {
+  background-color: beige;
+}
+
+.input-fields p {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-fields input {
+  padding: 3px 10px;
+  font-size: 18px;
+
+  border: none;
+  border-radius: var(--border-radius-medium);
+  height: 1.5em;
+  width: 15rem;
+  color: var(--color-text-hover);
+
+  box-shadow: 0 0 3px hsl(0, 2%, 75%);
+}
