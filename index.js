@@ -20,4 +20,8 @@ app.get('/login', (req, res) => {
     res.render('login');
 })
 
+app.get('/changePassword', (req, res)=> {
+    res.render('password');
+})
+
 app.listen(3000);
