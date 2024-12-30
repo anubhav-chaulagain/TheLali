@@ -40,14 +40,18 @@
 }
 
 .input-fields input {
-  padding: 3px 10px;
+  padding: 5px 10px;
   font-size: 18px;
 
   border: none;
   border-radius: var(--border-radius-medium);
-  height: 1.5em;
+  height: 1.7em;
   width: 15rem;
   color: var(--color-text-hover);
 
   box-shadow: 0 0 3px hsl(0, 2%, 75%);
+}
+
+.input-fields label {
+  color: var(--color-text);
 }
