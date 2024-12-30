@@ -28,15 +28,22 @@
   margin-top: 10vh;
 }
 
-.input-fields {
-  background-color: beige;
-}
-
-.input-fields p {
+.input-fields p,
+.display-result p {
   margin: 5px;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 10px;
+}
+
+.input-fields h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-fields p:first-of-type {
+  margin-top: 10px;
 }
 
 .input-fields input {
@@ -54,4 +61,20 @@
 
 .input-fields label {
   color: var(--color-text);
+}
+
+.display-result {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.display-result .result-item {
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+
+.display-result h4 {
+  color: grey;
+  font-weight: 100;
+  font-size: 17px;
 }
