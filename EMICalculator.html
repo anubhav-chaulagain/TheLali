@@ -4,46 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMI Calculator</title>
-    <link rel="stylesheet" href="EMICalculatorStyle.css">
+    <link rel="stylesheet" href="EMICalculatorStyle.css" />
   </head>
   <body>
     <h2>Calculate EMI</h2>
     <form id="emiCalculator">
-
       <div class="input-fields">
         <h3>EMI Calculator</h3>
 
         <p>
           <label for="amount">Amount</label>
-          <input type="number" name="amount" id="amount" placeholder="रु"/>
+          <input type="number" name="amount" id="amount" placeholder="रु" />
         </p>
 
         <p>
           <label for="interest">Interest Rate</label>
-          <input type="number" name="interest" id="interest" placeholder="%"/>
+          <input type="number" name="interest" id="interest" placeholder="%" />
         </p>
 
         <p>
           <label for="loan">Loan Tenure</label>
-          <input type="number" name="loan" id="loan" placeholder="Yearly"/>
+          <input type="number" name="loan" id="loan" placeholder="Yearly" />
         </p>
       </div>
 
       <div class="display-result">
-        <p>
+        <div class="result-item">
           <h4>Loan EMI</h4>
           <h3><span>रु</span>0</h3>
-        </p>
+        </div>
 
-        <p>
+        <div class="result-item">
           <h4>Total Interest Payable</h4>
           <h3><span>रु</span>0</h3>
-        </p>
+        </div>
 
-        <p>
+        <div class="result-item">
           <h4>Total of Payments (Principal + Interest)</h4>
           <h3><span>रु</span>0</h3>
-        </p>
+        </div>
       </div>
     </form>
   </body>
