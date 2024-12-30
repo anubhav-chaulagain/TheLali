@@ -28,4 +28,8 @@ app.get('/otp', (req, res)=> {
     res.render('otp');
 })
 
+app.get('/profile', (req, res)=> {
+    res.render('profile');
+})
+
 app.listen(3000);
