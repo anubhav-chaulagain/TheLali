@@ -105,3 +105,10 @@
 .price a:hover{
     background-color:rgb(222, 222, 218) ;
 }
+
+#search{
+    background-color: rgb(235, 135, 21);
+    padding:10px 15px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
