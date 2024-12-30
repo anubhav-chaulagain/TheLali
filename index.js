@@ -24,4 +24,8 @@ app.get('/changePassword', (req, res)=> {
     res.render('password');
 })
 
+app.get('/otp', (req, res)=> {
+    res.render('otp');
+})
+
 app.listen(3000);
