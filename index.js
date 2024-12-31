@@ -36,4 +36,8 @@ app.get('/main', (req, res)=>{
     res.render('mainPage');
 })
 
+app.get('/emi', (req, res)=>{
+    res.render('emiCalculator');
+})
+
 app.listen(3000);
