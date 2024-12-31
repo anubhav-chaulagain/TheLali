@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="MainPageStyle.css" />
+    <link rel="stylesheet" href="/styles/mainPage.css" />
+    <link rel="stylesheet" href="/styles/filter.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +28,7 @@
         <ul>
           <li>
             Buy
-            <img src="icons/expand-arrow.png" alt="expand-arrow" id="sign" />
+            <img src="/assets/icons/expand-arrow.png" alt="expand-arrow" id="sign" />
             <div class="dropdown-content">
               <a href="#"> Land </a>
               <a href="#">House </a>
@@ -36,7 +37,7 @@
           </li>
           <li>
             Rent
-            <img src="icons/expand-arrow.png" alt="expand-arrow" id="sign" />
+            <img src="/assets/icons/expand-arrow.png" alt="expand-arrow" id="sign" />
             <div class="dropdown-content">
               <a href="#"> Land </a>
               <a href="#">House </a>
@@ -45,7 +46,7 @@
           </li>
           <li>
             Tools
-            <img src="icons/expand-arrow.png" alt="expand-arrow" id="sign" />
+            <img src="/assets/icons/expand-arrow.png" alt="expand-arrow" id="sign" />
             <div class="dropdown-content">
               <a href="#"> Unit Converter </a>
               <a href="#"> Emi Calculator </a>
@@ -58,13 +59,14 @@
         <li>Post Property</li>
 
         <li id="profile-pic">
-          <img src="icons/profile.png" alt="Profile" />
+          <img src="/assets/icons/profile.png" alt="Profile" />
           <div class="dropdown">
-            <a href="Profile.html">View Profile</a>
+            <a href="/profile">View Profile</a>
             <a href="#">Log Out</a>
           </div>
         </li>
       </div>
     </header>
+    <%- include('filter.ejs') %>
   </body>
 </html>
