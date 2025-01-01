@@ -1,0 +1,26 @@
+.add-property-photo-container {
+  background-color: antiquewhite;
+}
+
+.add-property-photo-container h3 {
+  color: hsl(0, 0%, 29%);
+  font-weight: 600;
+}
+
+.photo-upload-section {
+  background-color: aliceblue;
+}
+
+.photo-upload-section label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-upload-section #upload-icon {
+  height: 40px;
+}
+
+.photo-upload-section span {
+  margin-bottom: 10px;
+}
