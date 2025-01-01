@@ -6,18 +6,15 @@
   padding: 0;
 }
 
-.add-property-photo-container {
-  width: fit-content;
-}
-
 .add-property-photo-container h3 {
   margin: 10px;
   font-size: 1.4em;
 }
 
 .photo-upload-section {
-  background-color: aliceblue;
+  background-color: #f2f4f7;
   border-radius: 10px;
+  width: fit-content;
 }
 
 .photo-upload-section label {
