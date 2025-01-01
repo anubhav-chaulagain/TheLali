@@ -41,4 +41,8 @@ app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
 })
 
+app.get('/address', (req, res) => {
+    res.render('addressSection')
+})
+
 app.listen(3000);
