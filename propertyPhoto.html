@@ -10,16 +10,25 @@
     <div class="add-property-photo-container">
       <h3>Add Photos</h3>
       <div class="photo-upload-section">
-        <input type="file" id="upload" accept="images/*" multiple required />
+        <input
+          type="file"
+          id="upload"
+          accept="images/*"
+          multiple
+          required
+          hidden
+        />
         <label for="upload">
           <span id="icon">
             <img
-              src="public/assets/icons/upload-icon.png"
+              id="upload-icon"
+              src="public/assets/icons/upload-icon.svg"
               alt="Upload"
               title="Upload Images"
             />
           </span>
-          <p>Click to Upload</p>
+          <span>Click to Upload</span>
+          <span>First Photo will be Property Thumbnail.</span>
         </label>
       </div>
     </div>
