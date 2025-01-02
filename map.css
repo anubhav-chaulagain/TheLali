@@ -15,3 +15,17 @@ body {
     margin: 0;
 }
 
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    margin: 20px auto;
+}
+
+  h2 {
+        text-align: center;
+        margin-bottom: 20px;
+}
+
