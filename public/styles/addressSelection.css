@@ -1,0 +1,76 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+  color: hsl(0, 1%, 15%);
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary-orange: rgb(255, 122, 0);
+  --color-primary-orange-light: rgb(255, 139, 31);
+
+  --color-text: rgb(74, 74, 74);
+  --color-text-hover: black;
+
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-big: 8px;
+}
+
+.address-details h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.address-input-fields {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* background-color: hsl(16, 4%, 50%); */
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.address-input-fields p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.address-input-fields input {
+  padding: 3px;
+  padding-left: 7px;
+  border-radius: var(--border-radius-medium);
+  height: 1.7em;
+  color: var(--color-text-hover);
+
+  box-shadow: 0 0 3px hsl(0, 2%, 75%);
+}
+
+.address-input-fields #city {
+  padding: 5px;
+  padding-left: 7px;
+
+  background-color: white;
+  height: 2em;
+  border-radius: var(--border-radius-medium);
+  color: var(--color-text-hover);
+  flex: 1;
+}
+
+.address-input-fields input,
+.address-input-fields #city {
+  border: 1px solid grey;
+}
+
+@media (max-width: 600px) {
+  .address-input-fields p {
+    flex: 1 1 100%; /* Stack items in one column on small screens */
+  }
+}

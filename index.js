@@ -36,6 +36,7 @@ app.get('/main', (req, res)=>{
     res.render('mainPage');
 })
 
+
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
 })
