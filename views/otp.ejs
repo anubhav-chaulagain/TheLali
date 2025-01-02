@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/otp.css"/>
+    <title>OTP Validation</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Validation</h2>
+        <p class="otp-sent">An OTP has been sent to your email address. Please enter it below:</p>
+        
+        
+        <form id="otpForm">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" class="input-field" required maxlength="6">
+            <span id="otpError" class="error-message">Invalid OTP. Please try again.</span>
+
+            <button type="submit" class="button">Verify OTP</button>
+            <span id="successMessage" class="success-message">OTP validated successfully!</span>
+        </form>
+    </div>
+
+    
+</body>
+</html>

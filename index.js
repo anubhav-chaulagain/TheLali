@@ -20,4 +20,24 @@ app.get('/login', (req, res) => {
     res.render('login');
 })
 
+app.get('/changePassword', (req, res)=> {
+    res.render('password');
+})
+
+app.get('/otp', (req, res)=> {
+    res.render('otp');
+})
+
+app.get('/profile', (req, res)=> {
+    res.render('profile');
+})
+
+app.get('/main', (req, res)=>{
+    res.render('mainPage');
+})
+
+app.get('/emiCalculator', (req, res)=>{
+    res.render('emiCalculator');
+})
+
 app.listen(3000);

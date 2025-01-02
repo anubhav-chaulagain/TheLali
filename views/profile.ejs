@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./styles/profile.css" />
+  </head>
+  <body>
+    <div class="profile-page-container">
+      <div class="profile-photo">
+        <h2>Profile Photo</h2>
+
+        <div class="photos">
+          <img src="/assets/icons/profile.png" alt="Default Profile" id="profile-pic" />
+
+          <label for="profile-image">Update Image</label>
+          <input
+            type="file"
+            accept="image/jpeg, image/png, image/jpg"
+            name="profile-image"
+            id="profile-image"
+          />
+        </div>
+      </div>
+      <form id="profile-details">
+        <h2>Profile Details</h2>
+        <div class="form-element">
+          <p>
+            <label>Username </label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+            />
+          </p>
+
+          <p>
+            <label>Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email@gmail.com"
+            />
+          </p>
+
+          <p>
+            <label>Phone </label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="9876543210"
+            />
+          </p>
+
+          <p>
+            <label for="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Kathmandu"
+            />
+          </p>
+        </div>
+
+        <p id="bottom-navigation">
+          <a href="/otp">Change Password</a>
+          <button id="save-profile">Save Profile</button>
+        </p>
+      </form>
+    </div>
+
+    <script>
+      const profilePic = document.getElementById("profile-pic");
+      const inputFile = document.getElementById("profile-image");
+
+      inputFile.onchange = function () {
+        profilePic.src = URL.createObjectURL(inputFile.files[0]);
+      };
+    </script>
+  </body>
+</html>

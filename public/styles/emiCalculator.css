@@ -1,0 +1,95 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary-orange: rgb(255, 122, 0);
+  --color-primary-orange-light: rgb(255, 139, 31);
+
+  --color-text: rgb(74, 74, 74);
+  --color-text-hover: black;
+
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-big: 8px;
+}
+
+#emiCalculator {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  background-color: aliceblue;
+  margin: auto;
+  margin-top: 10vh;
+  border: 1px solid black;
+}
+
+.input-fields p {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.input-fields h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-fields p:first-of-type {
+  margin-top: 10px;
+}
+
+.input-fields input {
+  padding: 5px 10px;
+  font-size: 18px;
+
+  border: none;
+  border-radius: var(--border-radius-medium);
+  height: 1.7em;
+  width: 15rem;
+  color: var(--color-text-hover);
+
+  box-shadow: 0 0 3px hsl(0, 2%, 75%);
+}
+
+.input-fields label {
+  color: var(--color-text);
+}
+
+.display-result {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+}
+
+.display-result .result-item {
+  border-bottom: 1px solid black;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.display-result h4 {
+  color: grey;
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.display-result h3,
+.display-result span {
+  color: hsl(0, 2%, 41%);
+}
+
+.result-item:last-of-type {
+  border: none;
+}
