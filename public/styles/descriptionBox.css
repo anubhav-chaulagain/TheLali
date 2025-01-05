@@ -12,5 +12,7 @@ body{
 .editor-container{
     width: 60%;
     max-width: 800px;
+    border: 2px solid black;
+    border-radius: 8px;
     background-color: #ffffff;
 }
