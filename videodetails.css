@@ -56,3 +56,10 @@ button:hover {
     background-color: #d76b2c;
 
 }
+
+.videocontainer {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
