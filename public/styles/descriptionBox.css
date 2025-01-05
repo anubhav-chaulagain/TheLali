@@ -8,3 +8,9 @@ body{
     align-items: center;
     height: 100vh;
 }
+
+.editor-container{
+    width: 60%;
+    max-width: 800px;
+    background-color: #ffffff;
+}
