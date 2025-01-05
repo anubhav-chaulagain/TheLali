@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #d9a7c7, #fffcdc); 
+  background: linear-gradient(to right, #d9a7c7, #fffcdc);
   color: #333;
   display: flex;
   justify-content: center;
@@ -69,15 +69,15 @@ select {
   width: 100%;
 }
 
-select{
+select {
   cursor: pointer;
 }
 
 
-button{
+button {
   width: 100%;
   padding: 15px;
-  background: #d72929;
+  background-color: #4CAF50;
   color: white;
   border: none;
   font-size: 16px;
@@ -87,14 +87,11 @@ button{
 }
 
 button:hover {
-  background: #432cd7;
+  background: #d72929;
 }
 
 
 
-button{
+button {
   padding: 10px;
 }
-
-
-
