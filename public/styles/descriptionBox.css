@@ -9,10 +9,18 @@ body{
     height: 100vh;
 }
 
-.editor-container{
+.description-container{
     width: 60%;
     max-width: 800px;
     border: 2px solid black;
     border-radius: 8px;
     background-color: #ffffff;
+}
+
+.toolbar{
+    display: flex;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px 8px 0 0;
 }
