@@ -12,7 +12,7 @@ body{
 .description-container{
     width: 60%;
     max-width: 800px;
-    border: 2px solid black;
+    border: 2px solid rgb(176, 171, 171);
     border-radius: 8px;
     background-color: #ffffff;
 }
