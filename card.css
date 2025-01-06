@@ -1,0 +1,12 @@
+.card {
+  background-color: aqua;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.card-image img {
+  height: 15rem;
+  width: 17rem;
+  object-fit: cover;
+}
