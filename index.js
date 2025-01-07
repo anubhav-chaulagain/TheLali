@@ -44,4 +44,12 @@ app.get('/emiCalculator', (req, res)=>{
 app.get('/descriptionBox',(req,res)=>{
     res.render('descriptionBox');
 })
+
+app.get('/internalDetails',(req,res)=>{
+    res.render('internalDetails');
+})
+
+app.get('/pricing',(req,res)=>{
+    res.render('pricing');
+})
 app.listen(3000);
