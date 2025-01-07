@@ -1,12 +1,58 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  color: hsl(0, 1%, 15%);
+  margin: 0;
+  padding: 0;
+}
+
+.property-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 5px 15px;
+
+  background-color: hsl(43, 36%, 49%);
+}
+
 .card {
   background-color: aqua;
   height: fit-content;
-  width: fit-content;
+  width: 16rem;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .card-image img {
   height: 15rem;
-  width: 17rem;
+  width: 100%;
   object-fit: cover;
+}
+
+.card-description {
+  padding: 15px;
+  background-color: bisque;
+}
+
+.card-description #price {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.card-description #property-location {
+  font-size: small;
+  color: hsl(0, 1%, 24%);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .card,
+  .card img {
+    width: 100%;
+  }
 }
