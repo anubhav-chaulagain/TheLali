@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/mainPage.css" />
+    <link rel="stylesheet" href="/styles/filter.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Handlee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span id="nep">द </span> <span id="lali">Lali</span>
+      </div>
+
+      <div class="navigation-tools">
+        <ul>
+          <li>
+            Buy
+            <img
+              src="/assets/icons/expand-arrow.png"
+              alt="expand-arrow"
+              id="sign"
+            />
+            <div class="dropdown-content">
+              <a href="#"> Land </a>
+              <a href="#">House </a>
+              <a href="#">Flat </a>
+            </div>
+          </li>
+          <li>
+            Rent
+            <img
+              src="/assets/icons/expand-arrow.png"
+              alt="expand-arrow"
+              id="sign"
+            />
+            <div class="dropdown-content">
+              <a href="#"> Land </a>
+              <a href="#">House </a>
+              <a href="#">Flat </a>
+            </div>
+          </li>
+          <li>
+            Tools
+            <img
+              src="/assets/icons/expand-arrow.png"
+              alt="expand-arrow"
+              id="sign"
+            />
+            <div class="dropdown-content">
+              <a href="/emiCalculator"> Emi Calculator </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="profile-container">
+        <li>Post Property</li>
+
+        <li id="profile-pic">
+          <img src="/assets/icons/profile.png" alt="Profile" />
+          <div class="dropdown">
+            <a href="/profile">View Profile</a>
+            <a href="#">Log Out</a>
+          </div>
+        </li>
+      </div>
+    </header>
+    <%- include('filter.ejs') %>
+  </body>
+</html>

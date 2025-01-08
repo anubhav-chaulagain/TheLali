@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="styles/SignUpStyle.css" />
+  </head>
+  <body>
+    <form id="signupForm">
+      <fieldset>
+        <h2>SignUp</h2>
+        <p>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+          />
+        </p>
+
+        <p>
+          <input
+            type="tel"
+            name="contactNo"
+            id="contactNo"
+            placeholder="Contact No"
+          />
+        </p>
+
+        <p>
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </p>
+
+        <p>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+        </p>
+
+        <p>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+          />
+        </p>
+
+        <p>
+          <input
+            type="email"
+            name="RecoveryEmail"
+            id="RecoveryEmail"
+            placeholder="Recovery Email"
+          />
+        </p>
+
+        <p id="cityContainer">
+          <label for="city">Choose a city</label>
+          <select name="city" id="city">
+            <option value="kathmandu">Kathmandu</option>
+            <option value="bhaktapur">Bhaktapur</option>
+            <option value="lalitpur">Lalitpur</option>
+          </select>
+        </p>
+
+        <button type="submit" name="submit" id="submit">Sign Up</button>
+
+        <p id="saveCredentialContainer">
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">Remember Me</label>
+        </p>
+        <a href="/login">Already have an account ?</a>
+      </fieldset>
+    </form>
+
+    <script src="../public/scripts/SignUp.js"></script>
+  </body>
+</html>

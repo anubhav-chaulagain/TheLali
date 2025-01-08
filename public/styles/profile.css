@@ -1,0 +1,139 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+:root {
+  --color-primary-orange: rgb(255, 122, 0);
+  --color-primary-orange-light: rgb(255, 139, 31);
+
+  --color-text: rgb(74, 74, 74);
+  --color-text-hover: black;
+
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-big: 8px;
+}
+
+.profile-page-container {
+  display: flex;
+  margin: auto;
+  margin-top: 20vh;
+  width: fit-content;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.747);
+}
+
+#profile-details {
+  background-color: rgb(152, 193, 228);
+}
+
+.form-element {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 20px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 5px;
+}
+
+p label {
+  margin-left: 3px;
+  color: hsl(120, 1%, 17%);
+}
+
+.form-element input {
+  display: block;
+  padding: 3px 10px;
+  font-size: 18px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: var(--border-radius-medium);
+  height: 1.5em;
+  width: 15rem;
+  color: var(--color-text-hover);
+
+  box-shadow: 0 0 5px hsl(0, 1%, 60%);
+}
+
+::placeholder {
+  color: hsl(0, 1%, 49%);
+}
+
+#bottom-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 10px;
+  margin-top: 38px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+button#save-profile {
+  background-color: var(--color-primary-orange-light);
+  border: none;
+  border-radius: var(--border-radius-big);
+  box-shadow: 0 0 5px hsl(0, 1%, 17%);
+  color: hsl(204, 12%, 92%);
+
+  padding: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+button#save-profile:active {
+  box-shadow: none;
+}
+
+.profile-photo {
+  background-color: aliceblue;
+  width: fit-content;
+  padding: 0 20px;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo img {
+  height: 180px;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 180px;
+}
+
+.profile-photo input {
+  display: none;
+}
+
+.photos label {
+  background-color: var(--color-primary-orange-light);
+  border: none;
+  border-radius: var(--border-radius-big);
+  box-shadow: 0 0 5px hsl(0, 1%, 17%);
+  color: hsl(204, 12%, 92%);
+
+  padding: 8px;
+  font-size: 17px;
+  width: fit-content;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.photos label:active {
+  box-shadow: none;
+}

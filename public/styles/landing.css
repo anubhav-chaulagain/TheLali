@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-primary-orange: rgb(255,122,0);
+    --color-primary-orange-light: rgb(255, 139, 31);
+
+    --color-text: rgb(74, 74, 74);
+    --color-text-hover: black;
+    
+    --border-radius-small: 2px;
+    --border-radius-medium: 4px;
+    --border-radius-big: 8px;
+}
+/* Navigation header */
+
+header {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 85px;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: all .3s ease-in-out;
+    display: inline-flex;
+    gap: 3px;
+}
+
+#logo:hover {
+    cursor: pointer;
+    gap: 10px;
+}
+
+#logo:hover #nep {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover #lali {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out 0.3s;
+}
+
+#lali {
+    margin-top: 3px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.btns a {
+    width: 80px;
+    /* background-color: var(--color-primary-orange);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    font-weight: 500;
+    transition: all .3s ease-in-out; */
+}
+
+.btns button {
+    width: 100%;
+    padding: 8px 5px;
+    background-color: var(--color-primary-orange);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+}
+
+.btns button:hover {
+    cursor: pointer;
+    background-color: var(--color-primary-orange-light);
+}
+
+/* Navigation header END */
+
+/* Body Start */
+
+main {
+    height: 100vh;
+    background-image: url(../assets/images/house-landing-page.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.slogan {
+    width: 325px;
+    position: relative;
+    left: 150px;
+    top: 35vh;
+}
+
+.slogan p:first-child {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.slogan p:last-child {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--color-primary-orange);
+}
+
+/* Body Start END*/
+
+/* Type writer effect */
+.slogan #cursor {
+    font-family: "Quicksand";
+}
+
