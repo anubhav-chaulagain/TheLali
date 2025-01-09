@@ -40,16 +40,4 @@ app.get('/main', (req, res)=>{
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
 })
-
-app.get('/descriptionBox',(req,res)=>{
-    res.render('descriptionBox');
-})
-
-app.get('/internalDetails',(req,res)=>{
-    res.render('internalDetails');
-})
-
-app.get('/pricing',(req,res)=>{
-    res.render('pricing');
-})
 app.listen(3000);
