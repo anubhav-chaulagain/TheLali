@@ -78,3 +78,8 @@ input:focus{
     border-color: rgb(255, 115, 0);
     background-color: #ffffff;
 }
+
+input::placeholder{
+    color: #aaa;
+    font-style: italic;
+}
