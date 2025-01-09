@@ -1,17 +1,19 @@
 body{
     background-color: rgb(255, 115, 0);
-    padding: 10px;
+    padding: 20px;
+    margin: 0;
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .container{
     width: 80%;
+    max-width: 1200px;
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 20px 30px;
+    border-radius: 8px;
 
 }
 
@@ -32,10 +34,10 @@ h2{
     gap: 20px;
 }
 
-.from-group{
+.form-group{
     display: flex;
     flex-direction: column;
-    width: calc(16.66% -20px);
+    width: calc(25% - 15px);
 }
 
 label{
@@ -50,6 +52,7 @@ select{
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
+    outline: none;
 
 }
 
@@ -69,3 +72,6 @@ input:focus{
     border-color: rgb(255, 115, 0);
     background-color: beige;
 }
+
+
+
