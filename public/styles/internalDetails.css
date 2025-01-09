@@ -43,3 +43,11 @@ label{
     color: black;
     margin-bottom: 5px;
 }
+
+select{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+
+}
