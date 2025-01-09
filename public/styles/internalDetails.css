@@ -19,3 +19,9 @@ h2{
     margin-bottom: 20px;
     color: rgb(255, 115, 0);
 }
+
+.details-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
