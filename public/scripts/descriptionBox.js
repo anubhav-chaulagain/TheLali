@@ -3,4 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const italicbutton = document.getElementById("italic");
 
     console.log("pratik");
+
+    boldbutton.addEventListener("click", () =>{
+        document.execCommand("bold",false,null);
+    })
 })
