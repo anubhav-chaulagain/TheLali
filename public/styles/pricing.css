@@ -50,3 +50,8 @@ input {
     outline: none;
 }
 
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
