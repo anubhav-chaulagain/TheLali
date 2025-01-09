@@ -27,5 +27,11 @@ h2 {
     flex-direction: column;
     gap: 20px;
 }
+.form-group {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px); 
+}
 
 
