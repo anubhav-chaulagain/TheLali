@@ -50,6 +50,21 @@
   font-weight: bold;
 }
 
+.card-description .additional-details ul,
+.card-description .additional-details li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.card-description .additional-details ul {
+  gap: 10px;
+}
+
+.card-description .additional-details li {
+  gap: 5px;
+}
+
 @media (max-width: 600px) {
   .card,
   .card img {
