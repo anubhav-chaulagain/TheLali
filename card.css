@@ -18,14 +18,21 @@
 }
 
 .card {
-  /* background-color: aqua; */
+  background-color: #f9f3f3;
   height: fit-content;
   width: 17rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; */
 }
+/* 
+.card:hover {
+  background-color: hsl(180, 5%, 87%);
+  scale: 1.05;
+} */
 
 .card-image img {
   height: 15rem;
@@ -59,10 +66,11 @@
   list-style-type: none;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .card-description .additional-details ul {
-  gap: 10px;
+  gap: 15px;
 }
 
 .card-description .additional-details li {
