@@ -52,6 +52,11 @@ select{
 
 }
 
+select:focus{
+    border-color: rgb(255, 115, 0);
+    background-color: beige;
+}
+
 input{
     padding: 10px;
     font-size: 14px;
