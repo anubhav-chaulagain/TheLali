@@ -48,4 +48,8 @@ app.get('/internalDetails', (req, res)=>{
 app.get('/pricing', (req, res)=>{
     res.render('pricing');
 })
+
+app.get('/descriptionBox', (req, res)=>{
+    res.render('descriptionBox');
+})
 app.listen(3000);
