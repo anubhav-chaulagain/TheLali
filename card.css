@@ -14,13 +14,13 @@
   flex-wrap: wrap;
   padding: 5px 15px;
 
-  background-color: hsl(43, 36%, 49%);
+  /* background-color: hsl(43, 36%, 49%); */
 }
 
 .card {
-  background-color: aqua;
+  /* background-color: aqua; */
   height: fit-content;
-  width: 16rem;
+  width: 17rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 
 .card-description {
   padding: 15px;
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 
 .card-description #price {
@@ -48,6 +48,10 @@
   font-size: small;
   color: hsl(0, 1%, 24%);
   font-weight: bold;
+}
+
+.card-description .additional-details {
+  margin-top: 10px;
 }
 
 .card-description .additional-details ul,
@@ -63,6 +67,10 @@
 
 .card-description .additional-details li {
   gap: 5px;
+}
+
+.card-description .additional-details ul img {
+  height: 25px;
 }
 
 @media (max-width: 600px) {
