@@ -25,3 +25,9 @@ h2{
     flex-direction: column;
     gap: 20px;
 }
+
+row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
