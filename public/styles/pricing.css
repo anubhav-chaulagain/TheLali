@@ -22,11 +22,6 @@ h2 {
     color: #333;
 }
 
-.pricing-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 .form-group {
     padding: 10px;
@@ -69,6 +64,7 @@ input:focus{
     background-color: #f9f9f9;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    outline: none;
     
 }
 
