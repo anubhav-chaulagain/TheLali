@@ -26,8 +26,14 @@ h2{
     gap: 20px;
 }
 
-row{
+.row{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.from-group{
+    display: flex;
+    flex-direction: column;
+    width: calc(16.66% -20px);
 }
