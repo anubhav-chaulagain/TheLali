@@ -55,3 +55,9 @@ input::placeholder {
     font-style: italic;
 }
 
+input:focus{
+    border-color: rgb(255, 115, 0);
+    background-color: #ffffff;
+}
+
+
