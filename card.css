@@ -42,17 +42,25 @@
 
 .card-description {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   /* background-color: bisque; */
 }
 
 .card-description #price {
-  font-size: 20px;
+  font-size: 23px;
   color: black;
   font-weight: bold;
 }
 
+.card-description #property-description {
+  font-size: 18px;
+}
+
 .card-description #property-location {
-  font-size: small;
+  margin-top: -4px;
+  font-size: 15px;
   color: hsl(0, 1%, 24%);
   font-weight: bold;
 }
@@ -70,7 +78,7 @@
 }
 
 .card-description .additional-details ul {
-  gap: 15px;
+  column-gap: 15px;
 }
 
 .card-description .additional-details li {
