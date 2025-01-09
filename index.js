@@ -41,8 +41,4 @@ app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
 })
 
-app.get('/card', (req, res)=>{
-    res.render('card');
-})
-
 app.listen(3000);
