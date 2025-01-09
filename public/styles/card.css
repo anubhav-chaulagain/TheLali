@@ -51,7 +51,7 @@
 .card-description #price {
   font-size: 23px;
   color: black;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .card-description #property-description {
