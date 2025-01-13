@@ -40,7 +40,7 @@ app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
 })
 
-app.get('/postproterty', (req, res)=>{
+app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
 })
 

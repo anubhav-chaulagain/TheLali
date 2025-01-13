@@ -10,8 +10,22 @@
     <link rel="stylesheet" href="/styles/videodetails.css">
     <link rel="stylesheet" href="/styles/areaSelection.css">
     <link rel="stylesheet" href="/styles/postpropertydetails.css">
+    <style>
+        .postproperty {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 800px;
+            margin-top: 500px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="postproperty">
+        <%- include('postpropertydetails.ejs') %>
+        <%- include('addressSection.ejs') %>
+    </div>
 </body>
 </html>
