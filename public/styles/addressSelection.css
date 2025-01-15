@@ -1,11 +1,11 @@
-/* * {
+* {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
   color: hsl(0, 1%, 15%);
   margin: 0;
   padding: 0;
-} */
+}
 
 :root {
   --color-primary-orange: rgb(255, 122, 0);
