@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #d9a7c7, #fffcdc);
     color: #333;
@@ -7,9 +7,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-}
+} */
 
-.container {
+/* .container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -17,11 +17,11 @@ body {
     width: 400px;
     text-align: center;
 
-}
+} */
 
 .h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 label {

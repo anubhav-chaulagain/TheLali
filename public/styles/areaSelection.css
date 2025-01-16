@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 
-.areaSelectionContainer {
+/* .areaSelectionContainer {
   width: 90%;
   max-width: 1200px;
   text-align: center;
@@ -21,7 +21,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
 
-}
+} */
 
 h2 {
   margin-bottom: 20px;
