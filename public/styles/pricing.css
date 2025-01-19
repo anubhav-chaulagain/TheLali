@@ -1,0 +1,65 @@
+/* body {
+    font-family: Arial,  Helvetica,sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+.pricing-section {
+    width: 100%;
+    /* max-width: 1000px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.pricing-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.pricing-section .form-group {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px); 
+}
+
+.pricing-section label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.pricing-section input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.pricing-section input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.pricing-section input:focus{
+    border-color: rgb(255, 115, 0);
+    background-color: #ffffff;
+}
+
+.pricing-section .negotiable-options {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+

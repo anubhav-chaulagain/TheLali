@@ -26,6 +26,10 @@
 }
 
 .address-input-fields {
+  width: 100%;
+}
+
+.address-input-fields {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -43,14 +47,14 @@
   box-sizing: border-box;
 }
 
-.address-input-fields input {
+.address-input-fields input#area {
   padding: 3px;
   padding-left: 7px;
   border-radius: var(--border-radius-medium);
   height: 1.7em;
   color: var(--color-text-hover);
-
   box-shadow: 0 0 3px hsl(0, 2%, 75%);
+  width: 100%;
 }
 
 .address-input-fields #city {
@@ -69,8 +73,10 @@
   border: 1px solid grey;
 }
 
-@media (max-width: 600px) {
-  .address-input-fields p {
-    flex: 1 1 100%; /* Stack items in one column on small screens */
-  }
+.address-input-fields input#address,
+.address-input-fields input#city,
+.address-input-fields input#area,
+.address-input-fields input#municipality,
+.address-input-fields input#ward {
+  width: 100%;
 }
