@@ -23,7 +23,7 @@
 }
 
 
-.form-group {
+.pricing-section .form-group {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
     background-color: #ffffff;
 }
 
-.negotiable-options {
+.pricing-section .negotiable-options {
     display: flex;
     gap: 20px;
 }
