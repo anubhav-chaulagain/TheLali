@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 /* 
 body {
   font-family: Arial, sans-serif;
@@ -27,31 +27,32 @@ body {
   /* padding: 20px; */
 }
 
-h2 {
+.roaddetails h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
-.form-group {
+.roaddetails .form-group {
   margin-bottom: 15px;
+  width: 100%;
 }
 
-label {
+.roaddetails label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
   color: #555;
 }
 
-.inputunit {
+.roaddetails .inputunit {
   display: flex;
   width: 100%;
   gap: 10px;
 }
 
-input[type="number"],
-select {
+.roaddetails input[type="number"],
+.roaddetails select {
   flex: 1;
   padding: 10px;
   font-size: 16px;
@@ -60,21 +61,21 @@ select {
   box-sizing: border-box;
 }
 
-input[type="number"]::placeholder {
+.roaddetails input[type="number"]::placeholder {
   color: #999;
 }
 
-input[type="number"],
-select {
+.roaddetails input[type="number"],
+.roaddetails select {
   width: 100%;
 }
 
-select {
+.roaddetails select {
   cursor: pointer;
 }
 
 
-button {
+.roaddetails button {
   width: 100%;
   padding: 15px;
   background-color: #4CAF50;
@@ -86,12 +87,12 @@ button {
   margin-top: 10px;
 }
 
-button:hover {
+.roaddetails button:hover {
   background: #d72929;
 }
 
 
 
-button {
+.roaddetails button {
   padding: 10px;
 }

@@ -18,9 +18,9 @@ body {
   /* background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3); */
   width: 100%;
-  max-width: 500px; */
+  /* max-width: 500px; */
 }
 
 .postpropertydetails-container h2 {
@@ -30,6 +30,7 @@ body {
 }
 
 .postpropertydetails-container .form-group {
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -53,4 +54,11 @@ body {
 
 .postpropertydetails-container select {
   cursor: pointer;
+}
+
+.postpropertydetails-container #title,
+.postpropertydetails-container #category,
+.postpropertydetails-container #purpose,
+.postpropertydetails-container #type {
+  width: 100%;
 }

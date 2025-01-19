@@ -30,13 +30,13 @@
     width: calc(33.33% - 20px); 
 }
 
-label {
+.pricing-section label {
     font-size: 14px;
     color: #666;
     margin-bottom: 5px;
 }
 
-input {
+.pricing-section input {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -45,14 +45,19 @@ input {
     outline: none;
 }
 
-input::placeholder {
+.pricing-section input::placeholder {
     color: #aaa;
     font-style: italic;
 }
 
-input:focus{
+.pricing-section input:focus{
     border-color: rgb(255, 115, 0);
     background-color: #ffffff;
+}
+
+.negotiable-options {
+    display: flex;
+    gap: 20px;
 }
 
 

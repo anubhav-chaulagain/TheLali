@@ -10,7 +10,7 @@
 
 }
 
-h2{
+.internalDetails h2{
     margin-bottom: 20px;
     color: #333;
 }
@@ -22,14 +22,14 @@ h2{
 }
 
 
-label{
+.details-form label{
     padding: 2px 2px 5px;
     font-size: 14px;
     color: #666;
     margin-bottom: 5px;
 }
 
-select{
+.details-form select{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -40,12 +40,12 @@ select{
 
 }
 
-select:focus{
+.details-form select:focus{
     border-color: rgb(255, 115, 0);
     background-color: #ffffff;
 }
 
-input{
+.details-form input{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -54,12 +54,12 @@ input{
     outline: none;
 }
 
-input:focus{
+.details-form input:focus{
     border-color: rgb(255, 115, 0);
     background-color: #ffffff;
 }
 
-input::placeholder{
+.details-form input::placeholder{
     color: #aaa;
     font-style: italic;
 }

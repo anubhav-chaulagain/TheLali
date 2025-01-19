@@ -19,13 +19,17 @@
 
 } */
 
-.h2 {
+.videodetails {
+    margin-top: 18px;
+}
+
+.videodetails .h2 {
     text-align: center;
-    margin-top: 18;
+    margin-top: 18px;
     margin-bottom: 18px;
 }
 
-label {
+.videodetails label {
     font-size: 16px;
     margin-top: 10px;
     display: block;
@@ -33,29 +37,13 @@ label {
 
 }
 
-input {
+.videodetails input {
     width: 95%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 4px;
     border: 1px solid #ccc;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    background: green;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #d76b2c;
-
 }
 
 .videocontainer {
