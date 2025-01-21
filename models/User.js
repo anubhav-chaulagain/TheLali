@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+
 class User {
     constructor(name, contactno, email, password, city) {
         this.name = name;
@@ -7,12 +9,12 @@ class User {
         this.city = city;
     }
 
-    insertUser() {
+    async insertUser() {
+        const hashedPassword = await bcrypt.hash(this.password, 12);
 
     }
 
     getLogin() {
-
     }
 
     updateUser() {
