@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/SignUpStyle.css" />
   </head>
   <body>
-    <form id="signupForm">
+    <form id="signupForm" action="/signup" method="post">
       <fieldset>
         <h2>SignUp</h2>
         <p>
@@ -47,15 +47,6 @@
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Confirm Password"
-          />
-        </p>
-
-        <p>
-          <input
-            type="email"
-            name="RecoveryEmail"
-            id="RecoveryEmail"
-            placeholder="Recovery Email"
           />
         </p>
 

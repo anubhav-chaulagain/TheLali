@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const database = require('./data/database')
+const User = require('./models/User')
 
 const app = express();
 
@@ -9,6 +10,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.urlencoded({ extended: false }));
+
 app.get('/', (req, res) => {
     res.render('landing');
 })
@@ -16,6 +19,10 @@ app.get('/', (req, res) => {
 app.get('/signup', (req, res) => {
     res.render('signup');
 })
+
+app.post('/signup', (req, res)=> {
+    const user = new User(req.body.username, req.body.contactNo, req.body.email, req.body.password, req.body.city);
+});
 
 app.get('/login', (req, res) => {
     res.render('login');
