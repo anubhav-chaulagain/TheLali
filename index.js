@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const database = require('./data/database')
 
 const app = express();
 
@@ -44,4 +45,7 @@ app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
 })
 
-app.listen(3000);
+database.connectToDatabase().then(
+    ()=>app.listen(3000)
+).catch((e)=>console.log("hi: "+ e)
+);
