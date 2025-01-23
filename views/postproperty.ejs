@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Property</title>
+    <link rel="stylesheet" href="/styles/addressSelection.css">
+    <link rel="stylesheet" href="/styles/roaddetails.css">
+    <link rel="stylesheet" href="/styles/submitpropertybutton.css">
+    <link rel="stylesheet" href="/styles/videodetails.css">
+    <link rel="stylesheet" href="/styles/areaSelection.css">
+    <link rel="stylesheet" href="/styles/postpropertydetails.css">
+    <link rel="stylesheet" href="/styles/internalDetails.css">
+    <link rel="stylesheet" href="/styles/descriptionBox.css">
+    <link rel="stylesheet" href="/styles/pricing.css">
+    <style>
+        .postproperty {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 800px;
+            margin-top: 2500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="postproperty">
+        <%- include('postproperty/postpropertydetails.ejs') %>
+        <%- include('postproperty/addressSection.ejs') %>
+        <%- include('postproperty/areaSelction.ejs') %>
+        <%- include('postproperty/videodetails.ejs') %>
+        <%- include('postproperty/internalDetails.ejs') %>
+        <%- include('postproperty/descriptionBox.ejs') %>
+        <%- include('postproperty/pricing.ejs') %>
+        <%- include('postproperty/roaddetails.ejs') %>
+    </div>
+</body>
+</html>
