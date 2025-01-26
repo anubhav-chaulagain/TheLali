@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const database = require('./data/database')
 const User = require('./models/User')
+const userController = require('./controller/user.controller');
 
 const app = express();
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -20,9 +22,7 @@ app.get('/signup', (req, res) => {
     res.render('signup');
 })
 
-app.post('/signup', (req, res)=> {
-    const user = new User(req.body.username, req.body.contactNo, req.body.email, req.body.password, req.body.city);
-});
+app.post('/signup', userController.createAccountWithEmailAndPassword);
 
 app.get('/login', (req, res) => {
     res.render('login');
