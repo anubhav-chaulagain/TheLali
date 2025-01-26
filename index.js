@@ -52,6 +52,10 @@ app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
 })
 
+app.get('/card', (req, res)=>{
+    res.render('card');
+})
+
 database.connectToDatabase().then(
     ()=>app.listen(3000)
 ).catch((e)=>console.log("hi: "+ e)
