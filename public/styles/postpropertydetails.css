@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #d9a7c7, #fffcdc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.postpropertydetails-container {
+  /* background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3); */
+  width: 100%;
+  /* max-width: 500px; */
+}
+
+.postpropertydetails-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.postpropertydetails-container .form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.postpropertydetails-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+
+.postpropertydetails-container input[type="text"],
+.postpropertydetails-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333
+}
+
+.postpropertydetails-container select {
+  cursor: pointer;
+}
+
+.postpropertydetails-container #title,
+.postpropertydetails-container #category,
+.postpropertydetails-container #purpose,
+.postpropertydetails-container #type {
+  width: 100%;
+}

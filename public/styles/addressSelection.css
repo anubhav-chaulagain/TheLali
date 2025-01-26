@@ -1,11 +1,11 @@
-* {
+/* * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
   color: hsl(0, 1%, 15%);
   margin: 0;
   padding: 0;
-}
+} */
 
 :root {
   --color-primary-orange: rgb(255, 122, 0);
@@ -26,7 +26,12 @@
 }
 
 .address-input-fields {
+  width: 100%;
+}
+
+.address-input-fields {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   flex-wrap: wrap;
   /* background-color: hsl(16, 4%, 50%); */
@@ -43,34 +48,22 @@
   box-sizing: border-box;
 }
 
-.address-input-fields input {
-  padding: 3px;
-  padding-left: 7px;
-  border-radius: var(--border-radius-medium);
-  height: 1.7em;
-  color: var(--color-text-hover);
-
-  box-shadow: 0 0 3px hsl(0, 2%, 75%);
-}
-
-.address-input-fields #city {
-  padding: 5px;
-  padding-left: 7px;
-
-  background-color: white;
-  height: 2em;
-  border-radius: var(--border-radius-medium);
-  color: var(--color-text-hover);
-  flex: 1;
+.address-input-fields label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
 }
 
 .address-input-fields input,
-.address-input-fields #city {
-  border: 1px solid grey;
+.address-input-fields select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333
 }
 
-@media (max-width: 600px) {
-  .address-input-fields p {
-    flex: 1 1 100%; /* Stack items in one column on small screens */
-  }
-}
+
+

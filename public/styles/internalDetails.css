@@ -1,44 +1,40 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f9;
-    padding: 20px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
-.container{
-    width: 80%;
-    max-width: 1200px;
+
+.internalDetails{
+    width: 100%;
+    /* max-width: 1200px;
     background-color: #ffffff;
     padding: 20px 30px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
 
 }
 
-h2{
+.internalDetails h2{
     margin-bottom: 20px;
     color: #333;
 }
 
-.details-form{
+/* .details-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+.details-form .row {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-
-label{
+.details-form label{
     padding: 2px 2px 5px;
     font-size: 14px;
     color: #666;
     margin-bottom: 5px;
 }
 
-select{
+.details-form select{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -49,12 +45,12 @@ select{
 
 }
 
-select:focus{
+.details-form select:focus{
     border-color: rgb(255, 115, 0);
     background-color: #ffffff;
 }
 
-input{
+.details-form input{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -63,12 +59,12 @@ input{
     outline: none;
 }
 
-input:focus{
+.details-form input:focus{
     border-color: rgb(255, 115, 0);
     background-color: #ffffff;
 }
 
-input::placeholder{
+.details-form input::placeholder{
     color: #aaa;
     font-style: italic;
 }
