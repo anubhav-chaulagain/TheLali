@@ -15,12 +15,17 @@
     color: #333;
 }
 
-.details-form{
+/* .details-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+.details-form .row {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 
 .details-form label{
     padding: 2px 2px 5px;
