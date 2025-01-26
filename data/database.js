@@ -1,6 +1,4 @@
-const pg = require("pg");
-
-const { Client } = pg;
+const { Client } = require("pg");
 
 const client = new Client({
   user: "postgres",
@@ -10,11 +8,14 @@ const client = new Client({
   database: "postgres",
 });
 
-async function connectToDatabase() {
-    const res = await client.connect();
-}
+(async () => {
+  try {
+    await client.connect(); // Connect to the database
+    console.log("Connected to the database successfully!");
+  } catch (error) {
+    console.error("Error connecting to the database:", error.message);
+    process.exit(1); // Exit the process if the connection fails
+  }
+})();
 
-
-module.exports = {
-    connectToDatabase:connectToDatabase
-}
+module.exports = client; // Export the connected client
