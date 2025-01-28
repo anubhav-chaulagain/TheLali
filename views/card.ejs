@@ -4,49 +4,177 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/card.css" />
+    <style>
+      .card {
+        position: relative;
+        width: 260px;
+        height: 300px;
+        border-radius: 14px;
+        z-index: 1111;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        margin: 50px 300px;
+      }
+
+      .bg {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 250px;
+        height: 290px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(24px);
+        border-radius: 10px;
+        overflow: hidden;
+        outline: 2px solid white;
+      }
+
+      .blob {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #ff0000;
+        opacity: 1;
+        filter: blur(12px);
+        animation: blob-bounce 5s infinite ease;
+      }
+
+      @keyframes blob-bounce {
+        0% {
+          transform: translate(-100%, -100%) translate3d(0, 0, 0);
+        }
+
+        25% {
+          transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+        }
+
+        50% {
+          transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+        }
+
+        75% {
+          transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+        }
+
+        100% {
+          transform: translate(-100%, -100%) translate3d(0, 0, 0);
+        }
+      }
+
+      .img {
+        border-radius: 4px;
+        height: 140px;
+        overflow: hidden;
+      }
+
+      .img img {
+        width: 100%;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .card-body h2 {
+        font-weight: bold;
+        color: #78a1b7;
+        margin-top: 3px;
+        margin-left: 4px;
+      }
+
+      .card-body p {
+        font-weight: lighter;
+      }
+
+      .location {
+        display: flex;
+        margin-top: 3px;
+        font-size: 14px;
+        color: #7b7b7b;
+        font-style: italic;
+      }
+
+      .location img {
+        width: 14px;
+        margin-right: 2px;
+      }
+
+      .desc {
+        color: #4d4f5a;
+        margin-left: 4px;
+        margin-top: 5px;
+      }
+
+      .card-footer,
+      .card-footer div {
+        display: flex;
+      }
+
+      .card-footer {
+        /* margin-left: 12px;
+        margin-right: 12px; */
+        padding: 3px 4px;
+        padding-left: 10px;
+        border-radius: 4px;
+        gap: 15px;
+        margin-top: 23px;
+        background-color: #f0f0f0;
+      }
+
+      .card-footer div {
+        gap: 8px;
+        align-items: center;
+      }
+
+      .card-footer img {
+        width: 14px;
+      }
+
+      .car img {
+        width: 24px;
+      }
+    </style>
   </head>
   <body>
-    <div class="property-card-container">
-      <div class="card">
-        <div class="card-image">
-          <img src="/assets/images/house1.jpg" alt="House Image" />
+    <div class="card">
+      <div class="bg">
+        <div class="img">
+          <img src="/assets/images/villa.jpg" alt="Villa" />
         </div>
-
-        <div class="card-description">
-          <p id="price">1 Lakh</p>
-          <p id="property-description">Commercial Property</p>
-          <p id="property-location">Bhanesword | KTM</p>
-          <div class="additional-details">
-            <ul>
-              <li>
-                <span class="icon">
-                  <img src="/assets/icons/land-area.png" alt="land-area" />
-                </span>
-                <span>
-                  6.5
-                  <small>Aana</small>
-                </span>
-              </li>
-              <li>
-                <span class="icon">
-                  <img src="/assets/icons/road-area.png" alt="" />
-                </span>
-                <span>
-                  20
-                  <small>Feet</small>
-                </span>
-              </li>
-              <li>
-                <span class="icon">
-                  <img src="/assets/icons/bedroom-icon.png" />
-                </span>
-                <span> 2 </span>
-              </li>
-            </ul>
+        <div class="card-body">
+          <h2>5 crore 15 lakhs</h2>
+          <div class="location">
+            <img src="/assets/icons/location.svg" alt="location icon" />
+            <p>Budhanilkantha, Kathmandu</p>
+          </div>
+          <p class="desc">
+            Luxurious villa with 3 swimming pools with area of 50 acres.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div>
+            <img src="/assets/icons/road.svg" alt="road" />
+            <p>13 feet</p>
+          </div>
+          <div class="car">
+            <img src="/assets/icons/car.svg" alt="car" />
+            <p>2</p>
           </div>
         </div>
       </div>
+      <div class="blob"></div>
     </div>
   </body>
 </html>

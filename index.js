@@ -2,8 +2,11 @@ const express = require('express');
 const path = require('path');
 const database = require('./data/database')
 const User = require('./models/User')
+const userController = require('./controller/user.controller');
+const { error } = require('console');
 
 const app = express();
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -17,12 +20,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup', {error: null, formData: {username: '', contactNo: '', email: '', password: '', city: ''}});
 })
 
-app.post('/signup', (req, res)=> {
-    const user = new User(req.body.username, req.body.contactNo, req.body.email, req.body.password, req.body.city);
-});
+app.post('/signup', userController.createAccountWithEmailAndPassword);
 
 app.get('/login', (req, res) => {
     res.render('login');
@@ -50,6 +51,10 @@ app.get('/emiCalculator', (req, res)=>{
 
 app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
+})
+
+app.get('/card', (req, res)=>{
+    res.render('card');
 })
 
 database.connectToDatabase().then(

@@ -9,8 +9,8 @@ const client = new Client({
 });
 
 async function connectToDatabase() {
-  const res = await client.connect();
-  console.log("Success");
+    const res = await client.connect();
+    console.log("Success");
 }
 module.exports = {
   connectToDatabase: connectToDatabase  

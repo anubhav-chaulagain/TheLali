@@ -1,19 +1,7 @@
 * {
-  font-size: 20px;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --color-primary-orange: rgb(255, 122, 0);
-  --color-primary-orange-light: rgb(255, 139, 31);
-
-  --color-text: rgb(74, 74, 74);
-  --color-text-hover: black;
-
-  --border-radius-small: 2px;
-  --border-radius-medium: 4px;
-  --border-radius-big: 8px;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,42 +10,46 @@ body {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(to right, #d9a7c7, #fffcdc);
-  /* background-color: white; */
   color: #333;
   padding: 10px;
 }
 
-#signupForm {
+form {
   display: flex;
-  max-width: 950px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 40px;
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 
 fieldset {
   border: none;
-  flex: 1;
-  padding: 40px 30px;
-  background: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
 
 h2 {
-  text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
   color: #3b3b3b;
-  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-input {
-  width: 18rem;
-  padding: 12px 40px 12px 15px;
-  font-size: 18px;
+p {
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #f0f0f0;
@@ -65,82 +57,71 @@ input {
   transition: 0.3s ease;
 }
 
-input:focus {
+input:focus,
+select:focus {
   border-color: #8d6fe5;
   box-shadow: 0 4px 6px rgba(141, 111, 229, 0.2);
 }
 
-p:first-of-type {
-  margin-top: 24px;
-}
-
-img {
-  height: 20px;
-  margin-left: -32px;
-  margin-bottom: -15px;
-  transition: all 1s;
-}
-
-img:hover {
-  cursor: pointer;
-}
-
-#togglePassword {
-  display: flex;
-}
-
-p {
-  display: flex;
-  align-items: center; /* Align the input vertically */
-  height: fit-content;
-  margin-bottom: 15px;
-  margin-top: 0;
-}
-
-#submit {
+button {
   width: 100%;
-  padding: 10px;
-  font-size: 17px;
+  padding: 12px;
+  font-size: 1rem;
   font-weight: 600;
   border-radius: 15px;
   border: none;
-  margin-bottom: 14px;
-
   background: #b53e1d;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-#submit:hover {
+button:hover {
   background: #d76b2c;
 }
 
-#submit:active {
-  box-shadow: none;
+#saveCredentialContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px; /* Adjusts space between checkbox and label */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#saveCredentialContainer input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+#saveCredentialContainer label {
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap; /* Ensures the label stays in one line */
 }
 
 a {
-  font-size: 0.8em;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
   text-decoration: none;
-  margin-left: 9px;
+  font-weight: 500;
+  color: #000001;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-text-hover);
+  color: #6b48c7;
 }
 
-#city {
-  margin-left: 12px;
-  padding: 5px;
-  color: var(--color-text);
+select {
+  margin-top: 10px;
 }
 
-#remember {
-  width: fit-content;
-  padding: 0;
-  height: 20px;
-  width: 20px;
-  margin-top: 4px;
-  margin-right: 10px;
+.errorInput {
+  border: 1.5px solid rgb(255, 88, 88);
 }
