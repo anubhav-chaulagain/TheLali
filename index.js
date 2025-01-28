@@ -3,6 +3,7 @@ const path = require('path');
 const database = require('./data/database')
 const User = require('./models/User')
 const userController = require('./controller/user.controller');
+const { error } = require('console');
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup', {error: null, formData: {username: '', contactNo: '', email: '', password: '', city: ''}});
 })
 
 app.post('/signup', userController.createAccountWithEmailAndPassword);

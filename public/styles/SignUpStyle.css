@@ -122,3 +122,7 @@ a:hover {
   margin-top: 4px;
   margin-right: 10px;
 }
+
+.errorInput {
+  border: 1.5px solid rgb(255, 88, 88);
+}

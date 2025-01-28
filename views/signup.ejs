@@ -16,6 +16,8 @@
             name="username"
             id="username"
             placeholder="Username"
+            required
+            value="<%= formData ? formData.username : '' %>"
           />
         </p>
 
@@ -25,11 +27,13 @@
             name="contactNo"
             id="contactNo"
             placeholder="Contact No"
+            required
+            value="<%= formData ? formData.contactNo : '' %>"
           />
         </p>
 
         <p>
-          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="email" name="email" id="email" placeholder="Email" required/>
         </p>
 
         <p>
@@ -38,6 +42,7 @@
             name="password"
             id="password"
             placeholder="Password"
+            required
           />
         </p>
 
@@ -47,12 +52,13 @@
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Confirm Password"
+            required
           />
         </p>
 
         <p id="cityContainer">
           <label for="city">Choose a city</label>
-          <select name="city" id="city">
+          <select name="city" id="city" required>
             <option value="kathmandu">Kathmandu</option>
             <option value="bhaktapur">Bhaktapur</option>
             <option value="lalitpur">Lalitpur</option>
@@ -60,11 +66,6 @@
         </p>
 
         <button type="submit" name="submit" id="submit">Sign Up</button>
-
-        <p id="saveCredentialContainer">
-          <input type="checkbox" name="remember" id="remember" />
-          <label for="remember">Remember Me</label>
-        </p>
         <a href="/login">Already have an account ?</a>
       </fieldset>
     </form>
