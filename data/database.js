@@ -4,7 +4,7 @@ const { Client } = pg;
 
 const client = new Client({
   user: "postgres",
-  password: "12345",
+  password: "123#@!456^%$789(*&",
   host: "localhost",
   port: 5432,
   database: "postgres",
