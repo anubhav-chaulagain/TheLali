@@ -3,7 +3,8 @@ const path = require('path');
 const database = require('./data/database')
 const User = require('./models/User')
 const userController = require('./controller/user.controller');
-const { error } = require('console');
+const admin = require('firebase-admin');
+
 
 const app = express();
 
@@ -20,7 +21,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
-    res.render('signup', {error: null, formData: {username: '', contactNo: '', email: '', password: '', city: ''}});
+    res.render('signup', {error: null, formData: {username: '', contactNo: '', email: '', password: '', city: '', confirmPassword: ''}, errorFields: []});
 })
 
 app.post('/signup', userController.createAccountWithEmailAndPassword);
@@ -56,6 +57,7 @@ app.get('/postproperty', (req, res)=>{
 app.get('/card', (req, res)=>{
     res.render('card');
 })
+
 
 database.connectToDatabase().then(
     ()=>app.listen(3000)

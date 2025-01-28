@@ -123,3 +123,11 @@ select {
 .errorInput {
   border: 1.5px solid rgb(255, 88, 88);
 }
+
+#error-message {
+  color: rgb(255, 88, 88);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}

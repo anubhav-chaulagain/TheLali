@@ -20,15 +20,40 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 const database = getDatabase(firebase);
 class User {
-    constructor(name, contactno, email, password, city) {
+    constructor(name, contactno, email, password, confirmPass, city) {
         this.name = name;
         this.contactno = contactno;
         this.email = email;
         this.password = password;
         this.city = city;
+        this.confirmPass = confirmPass;
     }
 
     async insertUser() {
+        const emptyFields = [];
+        if (!this.name) emptyFields.push('name');
+        if (!this.contactno) emptyFields.push('contactno');
+        if (!this.email) emptyFields.push('email');
+        if (!this.password) emptyFields.push('password');
+        if (!this.confirmPass) emptyFields.push('confirmPassword');
+        if (!this.city) emptyFields.push('city');
+
+        if (emptyFields.length > 0) {
+            return { success: false, message: 'The following fields are empty:', errorFields: emptyFields };
+        }
+
+        if(!this.email.includes("@gmail.com")) {
+            return { success: false, message: 'Please enter a valid email address', errorFields: ['email'] };
+        }
+
+        if(this.password.length < 8) {
+            return { success: false, message: 'Password should be atleast 8 characters long', errorFields: ['password'] };
+        }
+
+        if(this.password !== this.confirmPass) {
+            return { success: false, message: 'Passwords do not match', errorFields: ['password', 'confirmPassword'] };
+        }
+
         try {
             const hashedPassword = await bcrypt.hash(this.password, 12);
     
@@ -54,6 +79,7 @@ class User {
         } catch (error) {
             console.log("Error during user creation or saving data:", error.code, error.message);
         }
+        return { success: true, message: '', errorFields: [] };
     }
     
 

@@ -2,8 +2,11 @@ const User = require("../models/User");
 const { getDatabase } = require("firebase/database");
 
 async function createAccountWithEmailAndPassword(req, res) {
-    const user = new User(req.body.username, req.body.contactNo, req.body.email, req.body.password, req.body.city);
-    await user.insertUser();
+    const user = new User(req.body.username, req.body.contactNo, req.body.email, req.body.password, req.body.confirmPassword, req.body.city);
+    const outcome = await user.insertUser();
+    if(!outcome.success) {
+        return res.render('signup', {error: outcome.message, formData: req.body, errorFields: outcome.errorFields});
+    }
     res.redirect('/');
 }
 
