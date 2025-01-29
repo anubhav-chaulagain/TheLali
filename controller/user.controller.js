@@ -11,4 +11,10 @@ async function createAccountWithEmailAndPassword(req, res) {
     res.redirect('/');
 }
 
-module.exports = {createAccountWithEmailAndPassword:createAccountWithEmailAndPassword}
+async function loginWithEmailAndPassword(req, res) {
+    res.send('hi');
+}
+
+module.exports = {createAccountWithEmailAndPassword:createAccountWithEmailAndPassword,
+    loginWithEmailAndPassword:loginWithEmailAndPassword
+}
