@@ -1,17 +1,17 @@
 const bcrypt = require("bcrypt");
+
 const { initializeApp } = require("firebase/app");
+// const { getAnalytics } = require("firebase/analytics");
 const { getAuth, createUserWithEmailAndPassword } = require("firebase/auth");
 const { getDatabase, ref, set } = require("firebase/database");
 const admin = require("firebase-admin");
 const serviceAccount = require("../config/serviceAccountKey.json");
 
-// Initialize Firebase Admin SDK (for server-side operations)
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://thelali-5163a-default-rtdb.firebaseio.com",
+  databaseURL: "https://thelali-5163a-default-rtdb.firebaseio.com"
 });
 
-// Initialize Firebase Client SDK
 const firebaseConfig = {
   apiKey: "AIzaSyClUIw9MuThkqyonfJlKXWghrsgb8iz7kY",
   authDomain: "thelali-5163a.firebaseapp.com",
@@ -25,8 +25,6 @@ const firebaseConfig = {
 
 const firebase = initializeApp(firebaseConfig);
 const database = getDatabase(firebase);
-const auth = getAuth(firebase); // Initialize Auth once
-
 class User {
   constructor(name, contactno, email, password, confirmPass, city) {
     this.name = name;
@@ -54,9 +52,7 @@ class User {
       };
     }
 
-    // Improved email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(this.email)) {
+    if (!this.email.includes("@gmail.com")) {
       return {
         success: false,
         message: "Please enter a valid email address",
@@ -67,7 +63,7 @@ class User {
     if (this.password.length < 8) {
       return {
         success: false,
-        message: "Password should be at least 8 characters long",
+        message: "Password should be atleast 8 characters long",
         errorFields: ["password"],
       };
     }
@@ -81,41 +77,54 @@ class User {
     }
 
     try {
-      // Use Firebase Admin SDK for user creation
-      const userRecord = await admin.auth().createUser({
-        email: this.email,
-        password: this.password, // Firebase hashes it automatically
-        phoneNumber: this.contactno ? `+977${this.contactno}` : undefined,
-        displayName: this.name,
-      });
+      const hashedPassword = await bcrypt.hash(this.password, 12);
 
-      console.log("User created successfully:", userRecord.uid);
+      const auth = getAuth();
 
-      // Write user data to Firebase Realtime Database
-      await set(ref(database, `users/${userRecord.uid}`), {
+      // Create a new user in Firebase Authentication
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        this.email,
+        hashedPassword
+      );
+      const user = userCredential.user; // Get the authenticated user's data
+      const userId = user.uid; // Get the user's unique ID (uid)
+
+      console.log("User signed up successfully:", userId);
+
+      // Write additional user data to Firebase Realtime Database
+      const db = getDatabase();
+      await set(ref(db, `users/${userId}`), {
         contactno: this.contactno,
         username: this.name,
         city: this.city,
-        createdAt: new Date().toISOString(),
+        createdAt: new Date().toISOString(), // Add a timestamp for tracking
       });
 
       console.log("User data saved in Realtime Database successfully!");
-      return { success: true, message: "User created successfully" };
     } catch (error) {
-      console.log("Error during user creation:", error.code, error.message);
-      return { success: false, message: "Error creating user", error: error };
+      console.log(
+        "Error during user creation or saving data:",
+        error.code,
+        error.message
+      );
     }
+    return { success: true, message: "", errorFields: [] };
   }
+
+  getLogin() {}
+
+  updateUser() {}
 
   async getUsers() {
     try {
-      const listUsersResult = await admin.auth().listUsers();
-      const users = listUsersResult.users.map((userRecord) => userRecord.toJSON());
-      return { success: true, users: users };
-    } catch (error) {
-      console.log("Error fetching users:", error.code, error.message);
-      return { success: false, message: "Error fetching users", error: error };
-    }
+        const listUsersResult = await admin.auth().listUsers();
+        const users = listUsersResult.users.map((userRecord) => userRecord.toJSON());
+        return { success: true, users: users };
+      } catch (error) {
+        console.log("Error fetching users:", error.code, error.message);
+        return { success: false, message: "Error fetching users", error: error };
+      }
   }
 }
 

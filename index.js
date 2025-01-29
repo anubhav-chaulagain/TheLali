@@ -59,9 +59,6 @@ app.get('/card', (req, res)=>{
     res.render('card');
 })
 
-const u = new User("name", "contactno", "email", "password", "confirmPass", "city");
-
-u.getUsers().then((data)=>console.log(data)).catch((e)=>console.log(e));
 
 
 
