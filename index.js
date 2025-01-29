@@ -4,6 +4,7 @@ const database = require('./data/database')
 const User = require('./models/User')
 const userController = require('./controller/user.controller');
 const admin = require('firebase-admin');
+const { log } = require('console');
 
 
 const app = express();
@@ -57,6 +58,11 @@ app.get('/postproperty', (req, res)=>{
 app.get('/card', (req, res)=>{
     res.render('card');
 })
+
+const u = new User("name", "contactno", "email", "password", "confirmPass", "city");
+
+u.getUsers().then((data)=>console.log(data)).catch((e)=>console.log(e));
+
 
 
 database.connectToDatabase().then(
