@@ -31,6 +31,8 @@ app.get('/login', (req, res) => {
     res.render('login');
 })
 
+app.post('/login', userController.loginWithEmailAndPassword);
+
 app.get('/changePassword', (req, res)=> {
     res.render('password');
 })
