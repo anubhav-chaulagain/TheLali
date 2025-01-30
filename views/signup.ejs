@@ -10,11 +10,13 @@
     <form id="signupForm" action="/signup" method="post">
       <fieldset>
         <h2>SignUp</h2>
+        <p id="error-message"><%= error %></p>
         <p>
           <input
             type="text"
             name="username"
             id="username"
+            class="<%= errorFields && errorFields.includes('name') ? 'errorInput' : '' %>"
             placeholder="Username"
             required
             value="<%= formData ? formData.username : '' %>"
@@ -27,13 +29,14 @@
             name="contactNo"
             id="contactNo"
             placeholder="Contact No"
+            class="<%= errorFields && errorFields.includes('contactno') ? 'errorInput' : '' %>"
             required
             value="<%= formData ? formData.contactNo : '' %>"
           />
         </p>
 
         <p>
-          <input type="email" name="email" id="email" placeholder="Email" required/>
+          <input type="email" name="email" id="email" placeholder="Email" required class="<%= errorFields && errorFields.includes('email') ? 'errorInput' : '' %>"/>
         </p>
 
         <p>
@@ -42,6 +45,7 @@
             name="password"
             id="password"
             placeholder="Password"
+            class="<%= errorFields && errorFields.includes('password') ? 'errorInput' : '' %>"
             required
           />
         </p>
@@ -52,6 +56,7 @@
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Confirm Password"
+            class="<%= errorFields && errorFields.includes('confirmPassword') ? 'errorInput' : '' %>"
             required
           />
         </p>
@@ -73,3 +78,4 @@
     <script src="scripts/SignUp.js"></script>
   </body>
 </html>
+
