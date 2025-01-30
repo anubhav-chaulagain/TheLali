@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
 const database = require('./data/database')
-// const User = require('./models/User')
-// const userController = require('./controller/user.controller');
-// const admin = require('firebase-admin');
-const { log } = require('console');
+const User = require('./models/User')
+const userController = require('./controller/user.controller');
+const admin = require('firebase-admin');
 
 
 const app = express();
@@ -25,13 +24,13 @@ app.get('/signup', (req, res) => {
     res.render('signup', {error: null, formData: {username: '', contactNo: '', email: '', password: '', city: '', confirmPassword: ''}, errorFields: []});
 })
 
-// app.post('/signup', userController.createAccountWithEmailAndPassword);
+app.post('/signup', userController.createAccountWithEmailAndPassword);
 
 app.get('/login', (req, res) => {
     res.render('login');
 })
 
-// app.post('/login', userController.loginWithEmailAndPassword);
+app.post('/login', userController.loginWithEmailAndPassword);
 
 app.get('/changePassword', (req, res)=> {
     res.render('password');
@@ -61,10 +60,8 @@ app.get('/card', (req, res)=>{
     res.render('card');
 })
 
-app.listen(3000);
 
-
-// database.connectToDatabase().then(
-//     ()=>app.listen(3000)
-// ).catch((e)=>console.log("hi: "+ e)
-// );
+database.connectToDatabase().then(
+    ()=>app.listen(3000)
+).catch((e)=>console.log("hi: "+ e)
+);
