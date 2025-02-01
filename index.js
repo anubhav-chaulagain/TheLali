@@ -28,7 +28,7 @@ app.get('/signup', (req, res) => {
 app.post('/signup', userController.createAccountWithEmailAndPassword);
 
 app.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login', {success: true, error: null, errorFields: []});
 })
 
 app.post('/login', userController.loginWithEmailAndPassword);
@@ -68,3 +68,5 @@ database.connectToDatabase().then(
     ()=>app.listen(3000)
 ).catch((e)=>console.log("hi: "+ e)
 );
+
+

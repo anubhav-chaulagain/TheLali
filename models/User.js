@@ -6,6 +6,7 @@ const { getAuth, createUserWithEmailAndPassword } = require("firebase/auth");
 const { getDatabase, ref, set } = require("firebase/database");
 const admin = require("firebase-admin");
 const serviceAccount = require("../config/serviceAccountKey.json");
+const { signInWithEmailAndPassword } = require("firebase/auth");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -77,7 +78,6 @@ class User {
     }
 
     try {
-      const hashedPassword = await bcrypt.hash(this.password, 12);
 
       const auth = getAuth();
 
@@ -85,7 +85,7 @@ class User {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         this.email,
-        hashedPassword
+        this.password
       );
       const user = userCredential.user; // Get the authenticated user's data
       const userId = user.uid; // Get the user's unique ID (uid)
@@ -112,7 +112,44 @@ class User {
     return { success: true, message: "", errorFields: [] };
   }
 
-  getLogin() {}
+  async loginUser() {
+    const emptyFields = [];
+    if (!this.email) emptyFields.push("email");
+    if (!this.password) emptyFields.push("password");
+
+    if (emptyFields.length > 0) {
+      return {
+        success: false,
+        message: "The following fields are empty:",
+        errorFields: emptyFields,
+      };
+    }
+
+    if (!this.email.includes("@gmail.com")) {
+      return {
+        success: false,
+        message: "Please enter a valid email address",
+        errorFields: ["email"],
+      };
+    }
+
+    if (this.password.length < 8) {
+      return {
+        success: false,
+        message: "Password should be atleast 8 characters long",
+        errorFields: ["password"],
+      };
+    }
+
+    try {
+      const auth = getAuth();
+      const userCredential = await signInWithEmailAndPassword(auth, this.email, this.password);
+      return { success: true, message:null, errorFields:[]};
+    } catch (error) {
+      console.error("Login error:", error.message);
+      return { success: false, message: "Invalid Credentials!", errorFields:[]};
+    }
+  }
 
   updateUser() {}
 
