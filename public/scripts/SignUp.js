@@ -17,7 +17,7 @@ function addToggleIcon(field) {
 
   const lbl = document.createElement("label")
   const img = document.createElement("img");
-  img.src = "../../assets/icons/see.png"; 
+  img.src = "/assets/icons/see.png"; 
   img.alt = "Toggle Password Visibility";
 
   toggleIcon.appendChild(img);
@@ -37,10 +37,10 @@ function togglePasswordVisibility(field, tg) {
   setTimeout(() => {
     if (field.type === "password") {
       field.type = "text";
-      img.src = "icons/closed-eye.png";
+      img.src = "/assets/icons/closed-eye.png";
     } else {
       field.type = "password";
-      img.src = "icons/see.png";
+      img.src = "/assets/icons/see.png";
     }
     // Fade in the new image
     img.style.opacity = 1;

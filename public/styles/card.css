@@ -1,0 +1,97 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  color: hsl(0, 1%, 15%);
+  margin: 0;
+  padding: 0;
+}
+
+.property-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 5px 15px;
+
+  /* background-color: hsl(43, 36%, 49%); */
+}
+
+.card {
+  background-color: #f9f3f3;
+  height: fit-content;
+  width: 17rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; */
+}
+/* 
+.card:hover {
+  background-color: hsl(180, 5%, 87%);
+  scale: 1.05;
+} */
+
+.card-image img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-description {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* background-color: bisque; */
+}
+
+.card-description #price {
+  font-size: 23px;
+  color: black;
+  font-weight: 900;
+}
+
+.card-description #property-description {
+  font-size: 18px;
+}
+
+.card-description #property-location {
+  margin-top: -4px;
+  font-size: 15px;
+  color: hsl(0, 1%, 24%);
+  font-weight: bold;
+}
+
+.card-description .additional-details {
+  margin-top: 10px;
+}
+
+.card-description .additional-details ul,
+.card-description .additional-details li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-description .additional-details ul {
+  column-gap: 15px;
+}
+
+.card-description .additional-details li {
+  gap: 5px;
+}
+
+.card-description .additional-details ul img {
+  height: 25px;
+}
+
+@media (max-width: 600px) {
+  .card,
+  .card img {
+    width: 100%;
+  }
+}
