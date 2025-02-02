@@ -1,126 +1,130 @@
 .filter {
     display: flex;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     padding: 15px 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     margin-top: 30px;
-}
-.arrow {
-    font-size: 1rem; 
-    margin-left: 10px; 
-    color: #050505;
-    
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
 }
 
-.type button{
-    background-color: white;
-    padding:10px 15px;
-    border: 1px solid gray;
-    cursor: pointer;
+.arrow {
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #777;
+    transition: transform 0.7s ease-in-out;
+
 }
+
 .type button,
 .location button,
 .price button,
 #search {
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.7s ease-in-out;
     width: 150px;
+    position: relative;
 }
 
-.type a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+.type button:hover,
+.location button:hover,
+.price button:hover,
+#search:hover {
+    background-color: rgb(222, 222, 218);
+    transform: scale(1.05);
 }
 
-.type .content-type{
+
+.type button:active,
+.location button:active,
+.price button:active,
+#search:active {
+    background-color: rgb(200, 200, 200);
+    transform: scale(1);
+}
+
+/*drop down content*/
+.type .content-type,
+.location .content-location,
+.price .content-price {
     display: none;
     position: absolute;
     background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px(0,0,0,0.8);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 5px;
 }
 
-.type:hover .content-type{
+
+.type:hover .content-type,
+.location:hover .content-location,
+.price:hover .content-price {
     display: block;
-}
-
-.type:hover button{
-    background-color: rgb(222, 222, 218);
-}
-.type a:hover{
-    background-color:rgb(222, 222, 218) ;
-    color: black;
-}
-
-.location button{
-    background-color: white;
-    padding:10px 15px;
-    border: 1px solid gray;
+    flex-direction: column;
     cursor: pointer;
 }
-.location a{
+
+.type a,
+.location a,
+.price a {
     display: block;
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 10px 15px;
+    font-size: 1rem;
 }
 
-.location .content-location{
-    display: none;
-    position: absolute;
-    background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px(0,0,0,0.8);
-}
 
-.location:hover .content-location{
-    display: block;
-}
-
-.location:hover button{
+.type a:hover,
+.location a:hover,
+.price a:hover {
     background-color: rgb(222, 222, 218);
-}
-.location a:hover{
-    background-color:rgb(222, 222, 218) ;
-    color: black;
+    color: #ff6f61;
 }
 
-.price button{
-    background-color: white;
-    padding:10px 15px;
-    border: 1px solid gray;
+#search {
+    background-color: #ff6347;
+
+    padding: 12px 16px;
+    border: 1px solid #ff6347;
     cursor: pointer;
-}
-
-.price a{
-    display: block;
     color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.7s ease-in-out;
 }
 
-.price .content-price{
-    display: none;
-    position: absolute;
-    background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px(0,0,0,0.8);
-}
-.price:hover .content-price{
-    display: block;
+#search:hover {
+    background-color: #f76c5e;
+    border-color: #f76c5e;
+    transform: scale(1.05);
 }
 
-.price:hover button{
-    background-color: rgb(222, 222, 218);
+#search:active {
+    background-color: #e66d00;
+    transform: scale(1);
 }
 
-.price a:hover{
-    background-color:rgb(222, 222, 218);
-    color: black;
+
+.type:hover .arrow,
+.location:hover .arrow,
+.price:hover .arrow {
+    transform: rotate(180deg);
 }
 
-#search{
-    background-color: rgb(235, 135, 21);
-    padding:10px 15px;
-    border: 1px solid gray;
-    cursor: pointer;
+.type,
+.location,
+.price {
+    position: relative;
 }

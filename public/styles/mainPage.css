@@ -2,38 +2,41 @@ header {
   height: fit-content;
   display: flex;
   align-items: center;
-  padding: 10px;
-  gap: 13em;
+  padding: 20px 30px;
+  gap: 12em;
   justify-content: space-between;
+  background-color: #f7f7f7;
+  color: #333;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: inline-flex;
   align-items: center;
-  /* gap: 3px; */
   margin-left: 10px;
-  font-weight: 505;
+  font-weight: 600;
+  gap: 5px;
+  color: #6c757d;
 }
 
 .logo #nep {
-  margin-left: 10px;
-  margin-right: 4px;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  color: #ff6f61;
+
 }
 
 .navigation-tools ul {
   display: flex;
   gap: 40px;
   list-style-type: none;
-  font-weight: normal;
 }
 
 li {
@@ -45,15 +48,21 @@ li {
   gap: 4px;
 }
 
+li:hover {
+  color: #ff6f61;
+}
+
 .dropdown-content {
   position: absolute;
-  top: 15px;
-  padding-top: 25px;
+  top: 100%;
+  padding-top: 15px;
   left: -25px;
   z-index: 1;
-
+  background-color: #ffffff;
   min-width: 145px;
   display: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
 li:hover .dropdown-content {
@@ -63,11 +72,15 @@ li:hover .dropdown-content {
 }
 
 a {
-  background-color: hsl(150, 3%, 14%);
-  display: block;
   text-decoration: none;
-  color: whitesmoke;
-  padding: 10px;
+  color: #6c757d;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+a:hover {
+  background-color: #f0f0f0;
+  color: #ff6f61;
 }
 
 .profile-container {
@@ -76,28 +89,35 @@ a {
   align-items: center;
   gap: 20px;
   position: relative;
-
   width: fit-content;
 }
 
 .profile-container img {
-  height: 40px;
-  width: 40px;
-  border: 2px solid black;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #ff6f61;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-container img:hover {
+  transform: scale(1.1);
 }
 
 .profile-container .dropdown {
   position: absolute;
   top: 15px;
-  padding-top: 25px;
   left: -75px;
   z-index: 1;
-
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   min-width: 120px;
   display: none;
+  border-radius: 4px;
 }
+
+
 
 #profile-pic:hover .dropdown {
   display: block;
@@ -105,7 +125,35 @@ a {
 
 .dropdown-content a:hover,
 .dropdown a:hover {
-  background-color: grey;
+  background-color: #f0f0f0;
+  color: #ff6f61;
+}
+
+.post-property-btn {
+  padding: 12px 20px;
+  background-color: #ff6347;
+  /* Coral background */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.post-property-btn:hover {
+  background-color: #e66d00;
+
+  transform: scale(1.05);
+
+}
+
+.post-property-btn:active {
+  background-color: #d65c00;
+
+  transform: scale(1);
+
 }
 
 .logo:hover {

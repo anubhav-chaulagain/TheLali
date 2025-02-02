@@ -7,7 +7,7 @@ const admin = require('firebase-admin');
 const { log } = require('console');
 
 
-const app = express();
+const app = express();~
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -65,7 +65,7 @@ app.get('/card', (req, res)=>{
 
 
 database.connectToDatabase().then(
-    ()=>app.listen(3000)
+    ()=>app.listen(3005)
 ).catch((e)=>console.log("hi: "+ e)
 );
 
