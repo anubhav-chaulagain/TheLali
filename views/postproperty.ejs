@@ -27,14 +27,17 @@
 </head>
 <body>
     <div class="postproperty">
-        <%- include('postproperty/postpropertydetails.ejs') %>
-        <%- include('postproperty/addressSection.ejs') %>
-        <%- include('postproperty/areaSelction.ejs') %>
-        <%- include('postproperty/videodetails.ejs') %>
-        <%- include('postproperty/internalDetails.ejs') %>
-        <%- include('postproperty/descriptionBox.ejs') %>
-        <%- include('postproperty/pricing.ejs') %>
-        <%- include('postproperty/roaddetails.ejs') %>
+        <form action="/postProperty" method="post">
+            <%- include('postproperty/postpropertydetails.ejs') %>
+            <%- include('postproperty/addressSection.ejs') %>
+            <%- include('postproperty/areaSelction.ejs') %>
+            <%- include('postproperty/videodetails.ejs') %>
+            <%- include('postproperty/internalDetails.ejs') %>
+            <%- include('postproperty/descriptionBox.ejs') %>
+            <%- include('postproperty/pricing.ejs') %>
+            <%- include('postproperty/roaddetails.ejs') %>
+        </form>
+        
     </div>
 </body>
 </html>
