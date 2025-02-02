@@ -60,6 +60,10 @@ app.get('/card', (req, res)=>{
     res.render('card');
 })
 
+app.get('/details', (req, res)=>{
+    res.render('propertyImgCarousel');
+})
+
 
 database.connectToDatabase().then(
     ()=>app.listen(3000)
