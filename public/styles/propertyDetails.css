@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+}
+
+.property-owner-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.property-owner-detail .owner-details {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-bottom: 1px solid #000000;
+}
+
+.owner-details .image-container {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid black;
+}
+
+/* Enquiry Form style */
+.property-owner-detail .form-container {
+  width: 100%;
+  margin-top: 20px;
+  /* padding: 10px; */
+}
+
+.property-owner-detail .form-container fieldset {
+  border: none;
+  width: 100%;
+}
+
+.property-owner-detail .form-container fieldset h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+}
+
+.property-owner-detail .form-container fieldset p {
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.property-owner-detail .form-container fieldset input,
+.property-owner-detail .form-container fieldset textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f0f0f0;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.property-owner-detail .form-container fieldset textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.property-owner-detail .form-container fieldset input:focus,
+.property-owner-detail .form-container fieldset textarea:focus {
+  border-color: #8d6fe5;
+  box-shadow: 0 4px 6px rgba(141, 111, 229, 0.2);
+}
+
+.property-owner-detail .form-container fieldset button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 15px;
+  border: none;
+  background: #b53e1d;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.property-owner-detail .form-container fieldset button:hover {
+  background: #d76b2c;
+}
+
+/* Property information style */
+
+.property-info {
+  display: flex;
+  padding: 0 20px;
+  border-radius: 15px;
+  background: #fff;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.property-info .price-section {
+  font-size: 1.8rem;
+}
+
+.property-info .info-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.property-info .info-title #property-location {
+  display: flex;
+  align-items: center;
+}
+
+.property-info .info-title #property-location img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.property-features {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  margin-bottom: 25px;
+}
+
+.property-features ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.property-details {
+  display: flex;
+  flex-direction: column;
+}

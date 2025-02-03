@@ -61,7 +61,7 @@ app.get('/card', (req, res)=>{
 })
 
 app.get('/details', (req, res)=>{
-    res.render('propertyImgCarousel');
+    res.render('propertyDetails');
 })
 
 
