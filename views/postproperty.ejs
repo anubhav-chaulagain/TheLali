@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="/styles/roaddetails.css">
     <link rel="stylesheet" href="/styles/submitpropertybutton.css">
     <link rel="stylesheet" href="/styles/videodetails.css">
-    <link rel="stylesheet" href="/styles/areaSelection.css">
     <link rel="stylesheet" href="/styles/postpropertydetails.css">
     <link rel="stylesheet" href="/styles/internalDetails.css">
     <link rel="stylesheet" href="/styles/descriptionBox.css">
     <link rel="stylesheet" href="/styles/pricing.css">
+    <link rel="stylesheet" href="/styles/propertyPhoto.css">
+    <script src="/scripts/propertyPhoto.js" defer></script>
     <style>
         .postproperty {
             background-color: white;
@@ -30,10 +31,10 @@
         <form action="/postProperty" method="post">
             <%- include('postproperty/postpropertydetails.ejs') %>
             <%- include('postproperty/addressSection.ejs') %>
-            <%- include('postproperty/areaSelction.ejs') %>
             <%- include('postproperty/videodetails.ejs') %>
             <%- include('postproperty/internalDetails.ejs') %>
             <%- include('postproperty/descriptionBox.ejs') %>
+            <%- include('postproperty/propertyPhoto.ejs') %>
             <%- include('postproperty/pricing.ejs') %>
             <%- include('postproperty/roaddetails.ejs') %>
         </form>

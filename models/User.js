@@ -1,4 +1,3 @@
-const bcrypt = require("bcrypt");
 
 const { initializeApp } = require("firebase/app");
 // const { getAnalytics } = require("firebase/analytics");

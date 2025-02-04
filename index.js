@@ -3,6 +3,7 @@ const path = require('path');
 const database = require('./data/database')
 const User = require('./models/User')
 const userController = require('./controller/user.controller');
+const propertyController = require('./controller/property.controller');
 const admin = require('firebase-admin');
 
 
@@ -56,8 +57,14 @@ app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
 })
 
+app.post('/postproperty', propertyController.insertPropertyDataToDatabase);
+
 app.get('/card', (req, res)=>{
     res.render('card');
+})
+
+app.get('/photo', (req, res)=>{
+    res.render('propertyPhoto');
 })
 
 
