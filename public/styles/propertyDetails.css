@@ -130,6 +130,7 @@ body {
   margin-right: 5px;
 }
 
+/* Property Features */
 .property-features {
   display: flex;
   flex-direction: column;
@@ -143,10 +144,74 @@ body {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 10px;
+  width: 45em;
+}
+
+.property-features ul li {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
+.property-features ul li img {
+  height: 40px;
+}
+
+/* Property Details */
 .property-details {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* Property Overview */
+.property-overview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  border: 1px solid #000000;
+}
+
+.property-overview h3 {
+  border-bottom: 1px solid #000000;
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 10px;
+}
+
+.property-overview .overview-info ul {
+  list-style-type: none;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  flex-wrap: wrap;
+}
+
+/* Watch Video */
+
+.property-youtube-video {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+  width: fit-content;
+  border: 1px solid #000000;
+}
+
+.property-youtube-video header {
+  border-bottom: 1px solid #000000;
+}
+
+.property-youtube-video h3 {
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 10px;
 }
