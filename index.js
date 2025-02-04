@@ -6,8 +6,18 @@ const userController = require('./controller/user.controller');
 const propertyController = require('./controller/property.controller');
 const admin = require('firebase-admin');
 
+// Require the cloudinary library
+const cloudinary = require('cloudinary').v2;
 
 const app = express();
+
+// Return "https" URLs by setting secure: true
+cloudinary.config({
+  secure: true
+});
+
+// Log the configuration
+console.log(cloudinary.config());
 
 
 app.set('views', path.join(__dirname, 'views'));
