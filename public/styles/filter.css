@@ -1,126 +1,125 @@
 .filter {
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
 }
 .arrow {
-    font-size: 1rem; 
-    margin-left: 10px; 
-    color: #050505;
-    
+  font-size: 1rem;
+  margin-left: 10px;
+  color: #050505;
 }
 
-.type button{
-    background-color: white;
-    padding:10px 15px;
-    border: 1px solid gray;
-    cursor: pointer;
+.type button {
+  background-color: white;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  cursor: pointer;
 }
 .type button,
 .location button,
 .price button,
 #search {
-    width: 150px;
+  width: 150px;
 }
 
-.type a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+.type a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
-.type .content-type{
-    display: none;
-    position: absolute;
-    background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px(0,0,0,0.8);
+.type .content-type {
+  display: none;
+  position: absolute;
+  background-color: rgb(236, 236, 233);
+  box-shadow: 2px 2px 5px (0, 0, 0, 0.8);
 }
 
-.type:hover .content-type{
-    display: block;
+.type:hover .content-type {
+  display: block;
 }
 
-.type:hover button{
-    background-color: rgb(222, 222, 218);
+.type:hover button {
+  background-color: rgb(222, 222, 218);
 }
-.type a:hover{
-    background-color:rgb(222, 222, 218) ;
-    color: black;
-}
-
-.location button{
-    background-color: white;
-    padding:10px 15px;
-    border: 1px solid gray;
-    cursor: pointer;
-}
-.location a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+.type a:hover {
+  background-color: rgb(222, 222, 218);
+  color: black;
 }
 
-.location .content-location{
-    display: none;
-    position: absolute;
-    background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px(0,0,0,0.8);
+.location button {
+  background-color: white;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.location a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
-.location:hover .content-location{
-    display: block;
+.location .content-location {
+  display: none;
+  position: absolute;
+  background-color: rgb(236, 236, 233);
+  box-shadow: 2px 2px 5px (0, 0, 0, 0.8);
 }
 
-.location:hover button{
-    background-color: rgb(222, 222, 218);
-}
-.location a:hover{
-    background-color:rgb(222, 222, 218) ;
-    color: black;
+.location:hover .content-location {
+  display: block;
 }
 
-.price button{
-    background-color: white;
-    padding:10px 15px;
-    border: 1px solid gray;
-    cursor: pointer;
+.location:hover button {
+  background-color: rgb(222, 222, 218);
+}
+.location a:hover {
+  background-color: rgb(222, 222, 218);
+  color: black;
 }
 
-.price a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+.price button {
+  background-color: white;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  cursor: pointer;
 }
 
-.price .content-price{
-    display: none;
-    position: absolute;
-    background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px(0,0,0,0.8);
-}
-.price:hover .content-price{
-    display: block;
+.price a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
-.price:hover button{
-    background-color: rgb(222, 222, 218);
+.price .content-price {
+  display: none;
+  position: absolute;
+  background-color: rgb(236, 236, 233);
+  box-shadow: 2px 2px 5px (0, 0, 0, 0.8);
+}
+.price:hover .content-price {
+  display: block;
 }
 
-.price a:hover{
-    background-color:rgb(222, 222, 218);
-    color: black;
+.price:hover button {
+  background-color: rgb(222, 222, 218);
 }
 
-#search{
-    background-color: rgb(235, 135, 21);
-    padding:10px 15px;
-    border: 1px solid gray;
-    cursor: pointer;
+.price a:hover {
+  background-color: rgb(222, 222, 218);
+  color: black;
+}
+
+#search {
+  background-color: rgb(235, 135, 21);
+  padding: 10px 15px;
+  border: 1px solid gray;
+  cursor: pointer;
 }

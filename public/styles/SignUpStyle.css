@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to right, #d9a7c7, #fffcdc); 
+  background: linear-gradient(to right, #d9a7c7, #fffcdc);
   color: #333;
   padding: 10px;
 }
@@ -45,7 +45,8 @@ p {
   position: relative;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
@@ -56,7 +57,8 @@ input, select {
   transition: 0.3s ease;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   border-color: #8d6fe5;
   box-shadow: 0 4px 6px rgba(141, 111, 229, 0.2);
 }
