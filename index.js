@@ -5,19 +5,19 @@ const User = require('./models/User')
 const userController = require('./controller/user.controller');
 const propertyController = require('./controller/property.controller');
 const admin = require('firebase-admin');
-
-// Require the cloudinary library
-const cloudinary = require('cloudinary').v2;
+const multer = require("multer");
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 const app = express();
 
-// Return "https" URLs by setting secure: true
-cloudinary.config({
-  secure: true
-});
+const cloudinary = require('cloudinary').v2;
 
-// Log the configuration
-console.log(cloudinary.config());
+cloudinary.config({
+    cloud_name: "dmyxuqajh",
+    api_key: "781152936351827",
+    api_secret: "n_Ahfsju5QPvigQ43FnTMIJzBQY",
+  });
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -67,7 +67,7 @@ app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
 })
 
-app.post('/postproperty', propertyController.insertPropertyDataToDatabase);
+app.post('/postproperty', upload.array("imagesUploader", 10), propertyController.insertPropertyDataToDatabase);
 
 app.get('/card', (req, res)=>{
     res.render('card');

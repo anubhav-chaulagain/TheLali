@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post Property</title>
-    <link rel="stylesheet" href="/styles/addressSelection.css">
-    <link rel="stylesheet" href="/styles/roaddetails.css">
-    <link rel="stylesheet" href="/styles/submitpropertybutton.css">
-    <link rel="stylesheet" href="/styles/videodetails.css">
-    <link rel="stylesheet" href="/styles/postpropertydetails.css">
-    <link rel="stylesheet" href="/styles/internalDetails.css">
-    <link rel="stylesheet" href="/styles/descriptionBox.css">
-    <link rel="stylesheet" href="/styles/pricing.css">
-    <link rel="stylesheet" href="/styles/propertyPhoto.css">
+    <link rel="stylesheet" href="/styles/addressSelection.css" />
+    <link rel="stylesheet" href="/styles/roaddetails.css" />
+    <link rel="stylesheet" href="/styles/submitpropertybutton.css" />
+    <link rel="stylesheet" href="/styles/videodetails.css" />
+    <link rel="stylesheet" href="/styles/postpropertydetails.css" />
+    <link rel="stylesheet" href="/styles/internalDetails.css" />
+    <link rel="stylesheet" href="/styles/descriptionBox.css" />
+    <link rel="stylesheet" href="/styles/pricing.css" />
+    <link rel="stylesheet" href="/styles/propertyPhoto.css" />
     <script src="/scripts/propertyPhoto.js" defer></script>
     <style>
-        .postproperty {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
-            width: 90%;
-            max-width: 800px;
-            margin-top: 2500px;
-        }
+      .postproperty {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+          -2px -2px 5px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        max-width: 800px;
+        margin-top: 2800px;
+      }
+
+       button {
+        width: 100%;
+        padding: 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background: #d72929;
+      }
+
+      button {
+        padding: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="postproperty">
-        <form action="/postProperty" method="post">
-            <%- include('postproperty/postpropertydetails.ejs') %>
-            <%- include('postproperty/addressSection.ejs') %>
-            <%- include('postproperty/videodetails.ejs') %>
-            <%- include('postproperty/internalDetails.ejs') %>
-            <%- include('postproperty/descriptionBox.ejs') %>
-            <%- include('postproperty/propertyPhoto.ejs') %>
-            <%- include('postproperty/pricing.ejs') %>
-            <%- include('postproperty/roaddetails.ejs') %>
-        </form>
-        
+      <form action="/postproperty" method="post" enctype="multipart/form-data">
+        <%- include('postproperty/postpropertydetails.ejs') %> <%-
+        include('postproperty/addressSection.ejs') %> <%-
+        include('postproperty/videodetails.ejs') %> <%-
+        include('postproperty/internalDetails.ejs') %> <%-
+        include('postproperty/descriptionBox.ejs') %> <%-
+        include('postproperty/propertyPhoto.ejs') %> <%-
+        include('postproperty/pricing.ejs') %> <%-
+        include('postproperty/roaddetails.ejs') %>
+
+        <button type="sumbit">Sumbit</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>

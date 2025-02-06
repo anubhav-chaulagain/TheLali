@@ -1,11 +1,16 @@
 const imageList = document.querySelector(".image-list");
 const inputFile = document.getElementById("upload");
-
+const container = document.querySelector(".add-property-photo-container");
+const errorMessage = document.querySelector("#maxphotoerror-message");
 var arrayOfImage = new Array();
 
 inputFile.onchange = function () {
-  if(arrayOfImage.length > 6){
-    // alert("You can only upload 6 images");
+  if(arrayOfImage.length > 2){
+    errorMessage.style.display="block";
+    if (!container.classList.contains("maxphoto-error")) {
+      container.classList.add("maxphoto-error");
+  }
+    return;
   }
   const files = Array.from(inputFile.files);
   
