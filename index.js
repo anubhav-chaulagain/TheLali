@@ -7,11 +7,12 @@ const propertyController = require('./controller/property.controller');
 const admin = require('firebase-admin');
 const multer = require("multer");
 const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
-
-const app = express();
 
 const cloudinary = require('cloudinary').v2;
+const upload = multer({ storage: storage });
+
+const app = express();~
+
 
 cloudinary.config({
     cloud_name: "dmyxuqajh",
