@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 const User = require("../models/User");
 
 async function createAccountWithEmailAndPassword(req, res) {
@@ -19,6 +21,19 @@ async function loginWithEmailAndPassword(req, res) {
   if (!outcome.success) {
     return res.render("login", {formData:req.body, error: outcome.message, errorFields: outcome.errorFields });
   }
+
+  const userEmail = email;
+  const userData = { email: userEmail };
+
+  const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+  console.log("Access Token: ", accessToken);
+
+  res.cookie("token", accessToken, {
+    httpOnly: true, // Prevents JavaScript access (secure against XSS attacks)
+    secure: true, // Send only over HTTPS (disable this in localhost)
+    sameSite: "strict", // Prevents CSRF attacks
+    maxAge: 3600000 // Cookie expires in 1 hour
+});
 
   res.redirect("/main");
 }

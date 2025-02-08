@@ -5,14 +5,21 @@ const User = require('./models/User')
 const userController = require('./controller/user.controller');
 const propertyController = require('./controller/property.controller');
 const admin = require('firebase-admin');
-const multer = require("multer");
+const multer = require('multer');
 const storage = multer.memoryStorage();
-
 const cloudinary = require('cloudinary').v2;
 const upload = multer({ storage: storage });
+const cookieParser = require('cookie-parser');
 
-const app = express();~
+const authenticateToken = require('./middlewares/authenticateToken');
+// 
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+//
 
+const app = express();
+app.use(cookieParser());
+app.use(express.json()); 
 
 cloudinary.config({
     cloud_name: "dmyxuqajh",
@@ -56,6 +63,7 @@ app.get('/profile', (req, res)=> {
     res.render('profile');
 })
 
+app.use(authenticateToken);
 app.get('/main', (req, res)=>{
     res.render('mainPage');
 })
@@ -77,6 +85,14 @@ app.get('/card', (req, res)=>{
 app.get('/photo', (req, res)=>{
     res.render('propertyPhoto');
 })
+
+app.post('/jwt', (req, res)=>{
+    const userEmail = req.email;
+    const userData = { email: userEmail };
+
+    const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+    res.json({accessToken: accessToken});
+});
 
 
 database.connectToDatabase().then(
