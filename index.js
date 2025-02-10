@@ -61,6 +61,10 @@ app.get('/card', (req, res)=>{
     res.render('card');
 })
 
+app.get('/error', (req, res)=>{
+    res.render('error');
+})
+
 
 
 
