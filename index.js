@@ -100,6 +100,10 @@ app.get("/logout", (req, res) => {
 });
 
 
+app.get('/details', (req, res)=>{
+    res.render('propertyDetails');
+})
+
 
 database.connectToDatabase().then(
     ()=>app.listen(3000)
