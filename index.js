@@ -21,6 +21,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json()); 
 
+
 cloudinary.config({
     cloud_name: "dmyxuqajh",
     api_key: "781152936351827",
@@ -59,9 +60,8 @@ app.get('/otp', (req, res)=> {
     res.render('otp');
 })
 
-app.get('/profile', (req, res)=> {
-    res.render('profile');
-})
+app.get('/profile', userController.getUserById);
+app.post('/profile',  upload.single("profileImage"), userController.updateUserData);
 
 app.use(authenticateToken);
 app.get('/main', (req, res)=>{
@@ -93,6 +93,12 @@ app.post('/jwt', (req, res)=>{
     const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
     res.json({accessToken: accessToken});
 });
+
+app.get("/logout", (req, res) => {
+    res.clearCookie("token");
+    res.redirect("/login"); // Redirect to login page
+});
+
 
 
 database.connectToDatabase().then(
