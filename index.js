@@ -102,6 +102,10 @@ app.get('/details', (req, res)=>{
     res.render('propertyDetails');
 })
 
+app.get('/card', (req, res)=> {
+    res.render('card');
+})
+
 
 database.connectToDatabase().then(
     ()=>app.listen(3000)
