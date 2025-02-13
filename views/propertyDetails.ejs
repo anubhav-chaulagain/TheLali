@@ -86,20 +86,20 @@
 
     <div class="property-info">
       <div class="info-title">
-        <h4>Property Id: 123123</h4>
+        <!-- <h4>Property Id: 123123</h4> -->
         <p id="property-title">
-          Luxurious villa with 3 swimming pools with area of 50 acres.
+          <%= property.title %>
         </p>
 
         <p id="property-location">
           <span>
             <img src="/assets/icons/location.svg" alt="location icon" />
           </span>
-          Budhanilkantha, Kathmandu
+          <%= property.address %>
         </p>
       </div>
 
-      <div class="price-section">5 core 15 lakhs</div>
+      <div class="price-section"><%= property.price %></div>
     </div>
 
     <div class="property-features">
@@ -107,7 +107,7 @@
         <li>
           <span><img src="/assets/icons/house-icon.png" /></span>
           <div>
-            <h2>House</h2>
+            <h2><%= property.type %></h2>
             <small>Type</small>
           </div>
         </li>
@@ -115,15 +115,15 @@
         <li>
           <span><img src="/assets/icons/land-area.png" /></span>
           <div>
-            <h2>8.65</h2>
-            <small>Aana</small>
+            <h2><%= property.area %></h2>
+            <small>Area</small>
           </div>
         </li>
 
         <li>
           <span><img src="/assets/icons/bedroom-icon.png" /></span>
           <div>
-            <h2>5</h2>
+            <h2><%= property.bedroom %></h2>
             <small>Bedrooms</small>
           </div>
         </li>
@@ -131,7 +131,7 @@
         <li>
           <span><img src="/assets/icons/kitchen-icon.png" /></span>
           <div>
-            <h2>1</h2>
+            <h2><%= property.kitchen %></h2>
             <small>Kitchen</small>
           </div>
         </li>
@@ -139,7 +139,7 @@
         <li>
           <span><img src="/assets/icons/bathroom-icon.png" /></span>
           <div>
-            <h2>5</h2>
+            <h2><%= property.bathroom %></h2>
             <small>bathrooms</small>
           </div>
         </li>
@@ -147,7 +147,7 @@
         <li>
           <span><img src="/assets/icons/living-room-icon.png" /></span>
           <div>
-            <h2>1</h2>
+            <h2><%= property.livingRoom %></h2>
             <small>Living Room</small>
           </div>
         </li>
@@ -155,7 +155,7 @@
         <li>
           <span><img src="/assets/icons/parking-icon.png" /></span>
           <div>
-            <h2>3</h2>
+            <h2><%= property.parking %></h2>
             <small>Parking</small>
           </div>
         </li>
@@ -163,7 +163,7 @@
         <li>
           <span><img src="/assets/icons/floor-icon.png" /></span>
           <div>
-            <h2>2</h2>
+            <h2><%= property.totalFloors %></h2>
             <small>Total Floors</small>
           </div>
         </li>
@@ -172,9 +172,7 @@
 
     <div class="property-details">
       <h3>Property Details</h3>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi natus,
-      aliquid consectetur quaerat eos optio a magnam inventore alias illum iusto
-      ipsa, commodi itaque quibusdam? Fugiat ratione veritatis voluptatum totam.
+      <%= property.description %>
     </div>
 
     <div class="property-overview">
@@ -182,18 +180,18 @@
 
       <div class="overview-info">
         <ul>
-          <li>Property Type: Residential</li>
-          <li>Property Face: South</li>
-          <li>Built year: 2068 BS</li>
-          <li>Road Type: Gravelled</li>
-          <li>Negotiable: No</li>
-          <li>Furnishing: Unfurnished</li>
-          <li>City and Area: Kathmandu</li>
-          <li>Pricing: 5 core 15 lakhs</li>
+          <li>Property Type: <%= property.type %></li>
+          <li>Property Face: <%= property.facedirection %></li>
+          <li>Built year: <%= property.builtYear %>BS</li>
+          <li>Road Type: <%= property.roadtype %></li>
+          <li>Negotiable: <%= property.negoOptions %></li>
+          <li>Furnishing: <%= property.furnishing %></li>
+          <li>City and Area: <%= property.address %></li>
+          <li>Pricing: <%= property.price %></li>
 
-          <li>Purpose: Sale</li>
-          <li>Property Area: 8.65 Aana</li>
-          <li>Road Access: 13 feet</li>
+          <li>Purpose: <%= property.purpose %></li>
+          <li>Property Area:<%= property.area %> sq. m</li>
+          <li>Road Access: <%= property.roadaccess %></li>
         </ul>
       </div>
     </div>
@@ -205,7 +203,7 @@
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/5eQu6MFGoG8?si=Ai5-SSNj_UnPf9Kb"
+        src="<%= property.videoUrl %>"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

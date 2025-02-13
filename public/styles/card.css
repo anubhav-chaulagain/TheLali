@@ -89,3 +89,7 @@
 .property-card button:hover {
   background: #d9534f;
 }
+
+.property-card a {
+  padding: 0;
+}

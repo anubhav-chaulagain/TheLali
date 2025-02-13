@@ -106,6 +106,28 @@ async function getProperties(req, res) {
   }
 }
 
+async function showPropertyDetails(req, res) {
+  try {
+    const db = getDatabase();
+    const propertyId = req.params.id; // Get ID from URL
+    const propertyRef = ref(db, `properties/${propertyId}`); // Reference to the specific property
+    const snapshot = await get(propertyRef);
+
+    if (!snapshot.exists()) {
+      return res.status(404).send("Property not found");
+    }
+
+    const property = snapshot.val();
+    console.log("Fetched Property:", property);
+
+    res.render("propertyDetails", { property }); // Render the EJS template with the property data
+  } catch (error) {
+    console.error("Error fetching property:", error);
+    res.status(500).send("Error fetching property");
+  }
+}
+
 module.exports = { insertPropertyDataToDatabase: insertPropertyDataToDatabase,
-    getProperties: getProperties
+    getProperties: getProperties,
+    showPropertyDetails: showPropertyDetails
  };

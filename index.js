@@ -98,9 +98,7 @@ app.get("/logout", (req, res) => {
 });
 
 
-app.get('/details', (req, res)=>{
-    res.render('propertyDetails');
-})
+app.get('/property/:id', propertyController.showPropertyDetails)
 
 app.get('/card', (req, res)=> {
     res.render('card');
