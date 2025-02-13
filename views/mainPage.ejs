@@ -17,6 +17,21 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      #cards ul{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      #cards ul li {
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -67,7 +82,7 @@
       </div>
 
       <div class="profile-container">
-        <li>Post Property</li>
+        <button class="post-property-btn">Post Property</button>
 
         <li id="profile-pic">
           <img src="/assets/icons/profile.png" alt="Profile" />
@@ -79,5 +94,11 @@
       </div>
     </header>
     <%- include('filter.ejs') %>
+
+    <section id="cards">
+      <ul>
+          <li><%- include('./card') %></li>
+      </ul>
+    </section>
   </body>
 </html>

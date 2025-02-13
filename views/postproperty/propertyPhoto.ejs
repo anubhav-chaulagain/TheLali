@@ -1,0 +1,21 @@
+<div class="add-property-photo-container">
+  <h3>Add Photos</h3>
+  <div class="photo-upload-section">
+    <input type="file" id="upload" name="imagesUploader" accept="image/*" multiple required hidden />
+    <label for="upload">
+      <span id="icon">
+        <img
+          id="upload-icon"
+          src="/assets/icons/upload-icon.svg"
+          alt="Upload"
+          title="Upload Images"
+        />
+      </span>
+      <span>Click to Upload</span>
+      <span>First Photo will be Property Thumbnail.</span>
+    </label>
+  </div>
+
+  <ul class="image-list"></ul>
+  <div id="maxphotoerror-message">You can only upload at max 6 photos!</div>
+</div>

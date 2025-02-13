@@ -6,16 +6,17 @@
 }
 
 :root {
-    --color-primary-orange: rgb(255,122,0);
+    --color-primary-orange: rgb(255, 122, 0);
     --color-primary-orange-light: rgb(255, 139, 31);
 
     --color-text: rgb(74, 74, 74);
     --color-text-hover: black;
-    
+
     --border-radius-small: 2px;
     --border-radius-medium: 4px;
     --border-radius-big: 8px;
 }
+
 /* Navigation header */
 
 header {
@@ -24,20 +25,30 @@ header {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 25px 85px;
 }
 
 #logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    transition: all .3s ease-in-out;
+    font-size: 2rem;
     display: inline-flex;
-    gap: 3px;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 600;
+    gap: 5px;
+    color: #6c757d;
+}
+
+#logo #nep {
+    font-size: 2rem;
+    color: #ff6f61;
+
 }
 
 #logo:hover {
     cursor: pointer;
     gap: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 #logo:hover #nep {
@@ -120,4 +131,3 @@ main {
 .slogan #cursor {
     font-family: "Quicksand";
 }
-
