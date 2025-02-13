@@ -70,7 +70,7 @@ app.get('/main', (req, res)=>{
 
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
-})
+})  
 
 app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
