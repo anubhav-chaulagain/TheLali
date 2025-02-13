@@ -1,6 +1,5 @@
 .carousel {
   position: relative;
-  max-width: 600px;
   margin: auto;
   overflow: hidden;
 }
@@ -30,10 +29,12 @@
   z-index: 10;
 }
 .carousel__prev {
-  left: 10px;
+  /* left: 280px; */
+  width: fit-content;
 }
 .carousel__next {
   right: 10px;
+  width: max-content;
 }
 .carousel__thumbnails {
   display: flex;

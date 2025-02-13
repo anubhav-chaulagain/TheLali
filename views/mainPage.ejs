@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/mainPage.css" />
     <link rel="stylesheet" href="/styles/filter.css" />
+    <link rel="stylesheet" href="/styles/card.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +20,17 @@
     />
 
     <style>
+      #cards {
+        margin: 40px 30px;
+      }
+
       #cards ul{
         padding: 0;
         list-style: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 40px;
       }
 
       #cards ul li {
@@ -82,13 +87,15 @@
       </div>
 
       <div class="profile-container">
-        <button class="post-property-btn">Post Property</button>
+        <a href="/postproperty">
+          <button class="post-property-btn">Post Property</button>
+        </a>
 
         <li id="profile-pic">
           <img src="/assets/icons/profile.png" alt="Profile" />
           <div class="dropdown">
             <a href="/profile">View Profile</a>
-            <a href="#">Log Out</a>
+            <a href="/logout">Log Out</a>
           </div>
         </li>
       </div>
@@ -97,8 +104,14 @@
 
     <section id="cards">
       <ul>
-          <li><%- include('./card') %></li>
+        <% properties.forEach(property => { %>
+          <li>
+            <% let currentProperty = property; %>
+            <%- include('./card', { property: currentProperty }) %>
+          </li>
+        <% }) %>
       </ul>
+      
     </section>
   </body>
 </html>

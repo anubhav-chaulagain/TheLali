@@ -1,5 +1,6 @@
 .filter {
 <<<<<<< HEAD
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   background-color: #ffffff;
@@ -20,6 +21,8 @@
   border: 1px solid gray;
   cursor: pointer;
 =======
+=======
+>>>>>>> anubhav
     display: flex;
     justify-content: center;
     background-color: #f7f7f7;
@@ -37,6 +40,9 @@
 .location,
 .price {
     position: relative;
+<<<<<<< HEAD
+>>>>>>> anubhav
+=======
 >>>>>>> anubhav
 }
 
@@ -52,6 +58,7 @@
 .location button,
 .price button,
 #search {
+<<<<<<< HEAD
 <<<<<<< HEAD
   width: 150px;
 }
@@ -154,6 +161,8 @@
   cursor: pointer;
 }
 =======
+=======
+>>>>>>> anubhav
     background-color: white;
     padding: 12px 20px;
     border: 1px solid gray;
@@ -197,7 +206,7 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 8px;
-    width: 180px;
+    width: 160px;
     margin-top: 5px;
     opacity: 0;
     transition: opacity 0.1s ease, pointer-events 0s ease 0.2s;
@@ -245,7 +254,6 @@
     color: white;
     font-weight: 600;
     border-radius: 5px;
-    justify-content: center;
     transition: all 0.7s ease-in-out;
 }
 
@@ -271,5 +279,9 @@
 .location,
 .price {
     position: relative;
+<<<<<<< HEAD
+}
+>>>>>>> anubhav
+=======
 }
 >>>>>>> anubhav

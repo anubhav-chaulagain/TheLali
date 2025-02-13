@@ -7,6 +7,7 @@ const admin = require("firebase-admin");
 const serviceAccount = require("../config/serviceAccountKey.json");
 const { signInWithEmailAndPassword } = require("firebase/auth");
 
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://thelali-5163a-default-rtdb.firebaseio.com"
@@ -32,7 +33,7 @@ class User {
     this.email = email;
     this.password = password;
     this.city = city;
-    this.confirmPass = confirmPass;
+    this.confirmPass = confirmPass; 
   }
 
   async insertUser() {
@@ -97,6 +98,7 @@ class User {
         contactno: this.contactno,
         username: this.name,
         city: this.city,
+        profileImg: "",
         createdAt: new Date().toISOString(), // Add a timestamp for tracking
       });
 
@@ -143,25 +145,17 @@ class User {
     try {
       const auth = getAuth();
       const userCredential = await signInWithEmailAndPassword(auth, this.email, this.password);
-      return { success: true, message:null, errorFields:[]};
+      const userId = userCredential.user.uid;
+      
+
+      return { success: true, message:null, errorFields:[], userId:userId};
     } catch (error) {
       console.error("Login error:", error.message);
       return { success: false, message: "Invalid Credentials!", errorFields:[]};
     }
   }
 
-  updateUser() {}
 
-  async getUsers() {
-    try {
-        const listUsersResult = await admin.auth().listUsers();
-        const users = listUsersResult.users.map((userRecord) => userRecord.toJSON());
-        return { success: true, users: users };
-      } catch (error) {
-        console.log("Error fetching users:", error.code, error.message);
-        return { success: false, message: "Error fetching users", error: error };
-      }
-  }
 }
 
 module.exports = User;

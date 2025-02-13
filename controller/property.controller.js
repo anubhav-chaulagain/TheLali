@@ -77,4 +77,35 @@ async function insertPropertyDataToDatabase(req, res) {
     }
 }
 
-module.exports = { insertPropertyDataToDatabase };
+const { getDatabase, ref, get } = require("firebase/database");
+
+async function getProperties(req, res) {
+  try {
+    const db = getDatabase();
+    const propertiesRef = ref(db, "properties"); // Assuming "properties" is the node in your database
+    const snapshot = await get(propertiesRef);
+
+    if (!snapshot.exists()) {
+      return res.render("properties", { properties: [] }); // Pass an empty array if no data exists
+    }
+
+    const properties = snapshot.val();
+    const propertyList = Object.keys(properties).map((key) => ({
+      id: key, // Firebase keys as unique IDs
+      ...properties[key],
+    }));
+
+    console.log("Feteched p: ");
+    
+    console.log(propertyList);
+    
+    res.render("mainPage", { properties: propertyList }); // Send data to the EJS template
+  } catch (error) {
+    console.error("Error fetching properties:", error);
+    res.status(500).send("Error fetching properties");
+  }
+}
+
+module.exports = { insertPropertyDataToDatabase: insertPropertyDataToDatabase,
+    getProperties: getProperties
+ };

@@ -21,6 +21,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json()); 
 
+
 cloudinary.config({
     cloud_name: "dmyxuqajh",
     api_key: "781152936351827",
@@ -59,14 +60,11 @@ app.get('/otp', (req, res)=> {
     res.render('otp');
 })
 
-app.get('/profile', (req, res)=> {
-    res.render('profile');
-})
+app.get('/profile', userController.getUserById);
+app.post('/profile',  upload.single("profileImage"), userController.updateUserData);
 
 app.use(authenticateToken);
-app.get('/main', (req, res)=>{
-    res.render('mainPage');
-})
+app.get('/main', propertyController.getProperties);
 
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');

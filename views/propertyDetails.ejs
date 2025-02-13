@@ -11,74 +11,76 @@
       <button id="navigate-home">Home</button>
     </div>
 
-    <div class="property-images-carousel">
-      <%- include('propertyImgCarousel.ejs') %>
-    </div>
-
-    <div class="property-owner-detail">
-      <div class="owner-details">
-        <div class="image-container">
-          <img src="/assets/icons/profile.png" alt="owner profile" />
-        </div>
-
-        <div class="info">
-          <ul style="list-style-type: none">
-            <li>
-              <h2>Owner Name</h2>
-            </li>
-            <li>&#x260E; +99999999999</li>
-            <li>&#x2709; test@gmail.com</li>
-          </ul>
-        </div>
+    <div class="section1-container">
+      <div class="property-images-carousel">
+        <%- include('propertyImgCarousel.ejs') %>
       </div>
 
-      <div class="form-container">
-        <form id="contact-form">
-          <fieldset>
-            <h2>Contact For Enquiry</h2>
-            <p>
-              <input
-                type="text"
-                name="fullname"
-                id="fullname"
-                placeholder="Enter Your full name"
-                required
-              />
-            </p>
+      <div class="property-owner-detail">
+        <div class="owner-details">
+          <div class="image-container">
+            <img src="/assets/icons/profile.png" alt="owner profile" />
+          </div>
 
-            <p>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                required
-              />
-            </p>
+          <div class="info">
+            <ul style="list-style-type: none">
+              <li>
+                <h2>Owner Name</h2>
+              </li>
+              <li>&#x260E; +99999999999</li>
+              <li>&#x2709; test@gmail.com</li>
+            </ul>
+          </div>
+        </div>
 
-            <p>
-              <input
-                type="tel"
-                name="contactNo"
-                id="contactNo"
-                placeholder="Enter your phone no"
-                required
-              />
-            </p>
+        <div class="form-container">
+          <form id="contact-form">
+            <fieldset>
+              <h2>Contact For Enquiry</h2>
+              <p>
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  placeholder="Enter Your full name"
+                  required
+                />
+              </p>
 
-            <p>
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Enter your message here"
-              ></textarea>
-            </p>
+              <p>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </p>
 
-            <button type="submit" name="submit" id="submit">
-              Send message
-            </button>
-          </fieldset>
-        </form>
+              <p>
+                <input
+                  type="tel"
+                  name="contactNo"
+                  id="contactNo"
+                  placeholder="Enter your phone no"
+                  required
+                />
+              </p>
+
+              <p>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Enter your message here"
+                ></textarea>
+              </p>
+
+              <button type="submit" name="submit" id="submit">
+                Send message
+              </button>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -100,7 +102,6 @@
       <div class="price-section">5 core 15 lakhs</div>
     </div>
 
-    <!-- REQUIRED IMAGES AND DETAILS UPDATE-->
     <div class="property-features">
       <ul>
         <li>
@@ -211,21 +212,6 @@
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
-    </div>
-
-    <div class="property-amenities">
-      <h3>Property Amenities</h3>
-      <ul>
-        <li>Swimming pool</li>
-        <li>Garden</li>
-        <li>Garage</li>
-        <li>24/7 security</li>
-        <li>Water supply</li>
-        <li>Electricity</li>
-        <li>Internet</li>
-        <li>Drainage</li>
-        <li>Waste disposal</li>
-      </ul>
     </div>
   </body>
 </html>
