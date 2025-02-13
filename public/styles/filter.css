@@ -1,287 +1,143 @@
 .filter {
-<<<<<<< HEAD
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   padding: 15px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   margin-top: 30px;
-}
-.arrow {
-  font-size: 1rem;
-  margin-left: 10px;
-  color: #050505;
-}
-
-.type button {
-  background-color: white;
-  padding: 10px 15px;
-  border: 1px solid gray;
-  cursor: pointer;
-=======
-=======
->>>>>>> anubhav
-    display: flex;
-    justify-content: center;
-    background-color: #f7f7f7;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    margin-top: 30px;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
 }
 
 .type,
 .location,
 .price {
-    position: relative;
-<<<<<<< HEAD
->>>>>>> anubhav
-=======
->>>>>>> anubhav
+  position: relative;
 }
 
 .arrow {
-    font-size: 1rem;
-    margin-left: 10px;
-    color: #777;
-    transition: transform 0.7s ease-in-out;
-
+  font-size: 1rem;
+  margin-left: 10px;
+  color: #777;
+  transition: transform 0.7s ease-in-out;
 }
 
 .type button,
 .location button,
 .price button,
 #search {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  width: 150px;
-}
-
-.type a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.type .content-type {
-  display: none;
-  position: absolute;
-  background-color: rgb(236, 236, 233);
-  box-shadow: 2px 2px 5px (0, 0, 0, 0.8);
-}
-
-.type:hover .content-type {
-  display: block;
-}
-
-.type:hover button {
-  background-color: rgb(222, 222, 218);
-}
-.type a:hover {
-  background-color: rgb(222, 222, 218);
-  color: black;
-}
-
-.location button {
   background-color: white;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: 1px solid gray;
   cursor: pointer;
-}
-.location a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.location .content-location {
-  display: none;
-  position: absolute;
-  background-color: rgb(236, 236, 233);
-  box-shadow: 2px 2px 5px (0, 0, 0, 0.8);
-}
-
-.location:hover .content-location {
-  display: block;
-}
-
-.location:hover button {
-  background-color: rgb(222, 222, 218);
-}
-.location a:hover {
-  background-color: rgb(222, 222, 218);
-  color: black;
-}
-
-.price button {
-  background-color: white;
-  padding: 10px 15px;
-  border: 1px solid gray;
-  cursor: pointer;
-}
-
-.price a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.price .content-price {
-  display: none;
-  position: absolute;
-  background-color: rgb(236, 236, 233);
-  box-shadow: 2px 2px 5px (0, 0, 0, 0.8);
-}
-.price:hover .content-price {
-  display: block;
-}
-
-.price:hover button {
-  background-color: rgb(222, 222, 218);
-}
-
-.price a:hover {
-  background-color: rgb(222, 222, 218);
-  color: black;
-}
-
-#search {
-  background-color: rgb(235, 135, 21);
-  padding: 10px 15px;
-  border: 1px solid gray;
-  cursor: pointer;
-}
-=======
-=======
->>>>>>> anubhav
-    background-color: white;
-    padding: 12px 20px;
-    border: 1px solid gray;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    width: 160px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  width: 160px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 }
 
 .type button:hover,
 .location button:hover,
 .price button:hover,
 #search:hover {
-    background-color: rgb(222, 222, 218);
-    transform: scale(1.05);
-    border-color: black;
+  background-color: rgb(222, 222, 218);
+  transform: scale(1.05);
+  border-color: black;
 }
-
 
 .type button:active,
 .location button:active,
 .price button:active,
 #search:active {
-    background-color: rgb(200, 200, 200);
-    transform: scale(1);
+  background-color: rgb(200, 200, 200);
+  transform: scale(1);
 }
 
 /*drop down content*/
 .type .content-type,
 .location .content-location,
 .price .content-price {
-    position: absolute;
-    top: 90%;
-    left: 0;
-    background-color: rgb(236, 236, 233);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 8px;
-    width: 160px;
-    margin-top: 5px;
-    opacity: 0;
-    transition: opacity 0.1s ease, pointer-events 0s ease 0.2s;
-    pointer-events: none;
-    padding: 12px;
-    transform: translateY(-5px);
-
+  position: absolute;
+  top: 90%;
+  left: 0;
+  background-color: rgb(236, 236, 233);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  width: 160px;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.1s ease, pointer-events 0s ease 0.2s;
+  pointer-events: none;
+  padding: 12px;
+  transform: translateY(-5px);
 }
-
 
 .type:hover .content-type,
 .location:hover .content-location,
 .price:hover .content-price {
-    opacity: 1;
-    pointer-events: auto;
-    transition: opacity 0.3s ease, visibility 0s ease 0s, pointer-events 0s ease 0s;
-    transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0s ease 0s,
+    pointer-events 0s ease 0s;
+  transform: translateY(0);
 }
 
 .type a,
 .location a,
 .price a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 .type a:hover,
 .location a:hover,
 .price a:hover {
-    background-color: rgb(222, 222, 218);
-    color: #ff6f61;
+  background-color: rgb(222, 222, 218);
+  color: #ff6f61;
 }
 
 #search {
-    background-color: #ff6347;
-    padding: 12px 16px;
-    border: 1px solid #ff6347;
-    cursor: pointer;
-    color: white;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: all 0.7s ease-in-out;
+  background-color: #ff6347;
+  padding: 12px 16px;
+  border: 1px solid #ff6347;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.7s ease-in-out;
 }
 
 #search:hover {
-    background-color: #f76c5e;
-    border-color: #f76c5e;
-    transform: scale(1.05);
+  background-color: #f76c5e;
+  border-color: #f76c5e;
+  transform: scale(1.05);
 }
 
 #search:active {
-    background-color: #e66d00;
-    transform: scale(1);
+  background-color: #e66d00;
+  transform: scale(1);
 }
-
 
 .type:hover .arrow,
 .location:hover .arrow,
 .price:hover .arrow {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .type,
 .location,
 .price {
-    position: relative;
-<<<<<<< HEAD
+  position: relative;
 }
->>>>>>> anubhav
-=======
-}
->>>>>>> anubhav
