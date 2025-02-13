@@ -64,9 +64,7 @@ app.get('/profile', userController.getUserById);
 app.post('/profile',  upload.single("profileImage"), userController.updateUserData);
 
 app.use(authenticateToken);
-app.get('/main', (req, res)=>{
-    res.render('mainPage');
-})
+app.get('/main', propertyController.getProperties);
 
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');

@@ -126,13 +126,19 @@
       }
 
       .card-footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+      }
+
+      .card-footer {
         /* margin-left: 12px;
         margin-right: 12px; */
         padding: 3px 4px;
         padding-left: 10px;
         border-radius: 4px;
         gap: 15px;
-        margin-top: 23px;
+        /* margin-top: 23px; */
         background-color: #f0f0f0;
       }
 
@@ -155,26 +161,26 @@
     <div class="card">
       <div class="bg">
         <div class="img">
-          <img src="/assets/images/villa.jpg" alt="Villa" />
+          <img src="<%= property.images[0] %>" alt="Villa" />
         </div>
         <div class="card-body">
-          <h2>5 crore 15 lakhs</h2>
+          <h2><%= property.priceInWords %></h2>
           <div class="location">
             <img src="/assets/icons/location.svg" alt="location icon" />
-            <p>Budhanilkantha, Kathmandu</p>
+            <p><%= property.address %></p>
           </div>
           <p class="desc">
-            Luxurious villa with 3 swimming pools with area of 50 acres.
+            <%= property.description %>
           </p>
         </div>
         <div class="card-footer">
           <div>
             <img src="/assets/icons/road.svg" alt="road" />
-            <p>13 feet</p>
+            <p><%= property.roadaccess %></p>
           </div>
           <div class="car">
             <img src="/assets/icons/car.svg" alt="car" />
-            <p>2</p>
+            <p><%= property.parking %></p>
           </div>
         </div>
       </div>

@@ -97,8 +97,14 @@
 
     <section id="cards">
       <ul>
-          <li><%- include('./card') %></li>
+        <% properties.forEach(property => { %>
+          <li>
+            <% let currentProperty = property; %>
+            <%- include('./card', { property: currentProperty }) %>
+          </li>
+        <% }) %>
       </ul>
+      
     </section>
   </body>
 </html>
