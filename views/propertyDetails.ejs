@@ -88,9 +88,8 @@
       <div class="info-title">
         <!-- <h4>Property Id: 123123</h4> -->
         <!-- <h4>Property Id: 123123</h4> -->
-        <p id="property-title">
-          <%= property.title %>
-        </p>
+        <!-- <h4>Property Id: 123123</h4> -->
+        <p id="property-title"><%= property.title %></p>
 
         <p id="property-location">
           <span>
@@ -181,18 +180,18 @@
 
       <div class="overview-info">
         <ul>
-          <li>Property Type: <%= property.type %></li>
-          <li>Property Face: <%= property.facedirection %></li>
-          <li>Built year: <%= property.builtYear %>BS</li>
-          <li>Road Type: <%= property.roadtype %></li>
-          <li>Negotiable: <%= property.negoOptions %></li>
-          <li>Furnishing: <%= property.furnishing %></li>
-          <li>City and Area: <%= property.address %></li>
-          <li>Pricing: <%= property.price %></li>
+          <li><span>Property Type: </span> <%= property.type %></li>
+          <li><span>Property Face: </span> <%= property.facedirection %></li>
+          <li><span>Built year: </span><%= property.builtYear %>BS</li>
+          <li><span>Road Type: </span><%= property.roadtype %></li>
+          <li><span>Negotiable: </span><%= property.negoOptions %></li>
+          <li><span>Furnishing: </span><%= property.furnishing %></li>
+          <li><span>City and Area: </span><%= property.address %></li>
+          <li><span>Pricing: </span><%= property.price %></li>
 
-          <li>Purpose: <%= property.purpose %></li>
-          <li>Property Area:<%= property.area %> sq. m</li>
-          <li>Road Access: <%= property.roadaccess %></li>
+          <li><span>Purpose: </span><%= property.purpose %></li>
+          <li><span>Property Area: </span><%= property.area %> sq. m</li>
+          <li><span>Road Access: </span><%= property.roadaccess %></li>
         </ul>
       </div>
     </div>
