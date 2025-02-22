@@ -68,7 +68,7 @@ app.get('/main', propertyController.getProperties);
 
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
-})
+})  
 
 app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
@@ -91,12 +91,6 @@ app.post('/jwt', (req, res)=>{
     const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
     res.json({accessToken: accessToken});
 });
-
-app.get("/logout", (req, res) => {
-    res.clearCookie("token");
-    res.redirect("/login"); // Redirect to login page
-});
-
 
 app.get('/property/:id', propertyController.showPropertyDetails)
 
