@@ -5,7 +5,7 @@ class Property {
     title, category, purpose, type, address, city, cityArea, municipality, ward,
     videoUrl, bedroom, kitchen, bathroom, livingRoom, parking, totalFloors,
     builtYear, furnishing, plotNumber, description, price, priceInWords,
-    negoOptions, area, buildarea, roadtype, facedirection, roadaccess, imagesUploader
+    negoOptions, area, buildarea, roadtype, facedirection, roadaccess, ownerEmail, imagesUploader
   ) {
     this.title = title;
     this.category = category;
@@ -35,6 +35,7 @@ class Property {
     this.roadtype = roadtype;
     this.facedirection = facedirection;
     this.roadaccess = roadaccess;
+    this.ownerEmail = ownerEmail;
     this.imagesUploader = imagesUploader; // Array of image URLs
   }
 
@@ -71,6 +72,7 @@ class Property {
         roadtype: this.roadtype,
         facedirection: this.facedirection,
         roadaccess: this.roadaccess,
+        ownerEmail: this.ownerEmail,
         images: this.imagesUploader, // Store images in Firebase
         createdAt: new Date().toISOString(),
       });

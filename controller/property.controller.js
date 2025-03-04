@@ -9,7 +9,8 @@ cloudinary.config({
 });
 
 async function insertPropertyDataToDatabase(req, res) {
-    console.log("Received files: ",req.files);
+    // console.log("Received files: ",req.files);
+    const ownerEmail = req.userData.email;
     try {
         if (!req.files || req.files.length === 0) {
             return res.status(400).send("No images uploaded");
@@ -61,6 +62,7 @@ async function insertPropertyDataToDatabase(req, res) {
             req.body.roadtype,
             req.body.facedirection,
             req.body.roadaccess,
+            ownerEmail,
             imageUrls // Cloudinary image URLs
         );
 

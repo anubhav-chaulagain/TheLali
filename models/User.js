@@ -146,7 +146,7 @@ class User {
       const auth = getAuth();
       const userCredential = await signInWithEmailAndPassword(auth, this.email, this.password);
       const userId = userCredential.user.uid;
-      
+      console.log("hiiiiieieiie", userCredential.user.reloadUserInfo.email, )
 
       return { success: true, message:null, errorFields:[], userId:userId};
     } catch (error) {
