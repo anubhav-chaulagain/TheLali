@@ -95,6 +95,15 @@ app.get('/card', (req, res)=> {
     res.render('card');
 })
 
+app.get('/logout', (req, res)=> {
+    res.clearCookie('token', {
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+    });
+    res.redirect('/login')
+})
+
 
 database.connectToDatabase().then(
     ()=>app.listen(3000)
