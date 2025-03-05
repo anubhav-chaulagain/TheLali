@@ -10,12 +10,16 @@
     <form id="signupForm" action="/signup" method="post">
       <fieldset>
         <h2>SignUp</h2>
+        <p id="error-message"><%= error %></p>
         <p>
           <input
             type="text"
             name="username"
             id="username"
+            class="<%= errorFields && errorFields.includes('name') ? 'errorInput' : '' %>"
             placeholder="Username"
+            required
+            value="<%= formData ? formData.username : '' %>"
           />
         </p>
 
@@ -25,11 +29,14 @@
             name="contactNo"
             id="contactNo"
             placeholder="Contact No"
+            class="<%= errorFields && errorFields.includes('contactno') ? 'errorInput' : '' %>"
+            required
+            value="<%= formData ? formData.contactNo : '' %>"
           />
         </p>
 
         <p>
-          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="email" name="email" id="email" placeholder="Email" required class="<%= errorFields && errorFields.includes('email') ? 'errorInput' : '' %>"/>
         </p>
 
         <p>
@@ -38,6 +45,8 @@
             name="password"
             id="password"
             placeholder="Password"
+            class="<%= errorFields && errorFields.includes('password') ? 'errorInput' : '' %>"
+            required
           />
         </p>
 
@@ -47,12 +56,14 @@
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Confirm Password"
+            class="<%= errorFields && errorFields.includes('confirmPassword') ? 'errorInput' : '' %>"
+            required
           />
         </p>
 
         <p id="cityContainer">
           <label for="city">Choose a city</label>
-          <select name="city" id="city">
+          <select name="city" id="city" required>
             <option value="kathmandu">Kathmandu</option>
             <option value="bhaktapur">Bhaktapur</option>
             <option value="lalitpur">Lalitpur</option>
@@ -60,15 +71,11 @@
         </p>
 
         <button type="submit" name="submit" id="submit">Sign Up</button>
-
-        <p id="saveCredentialContainer">
-          <input type="checkbox" name="remember" id="remember" />
-          <label for="remember">Remember Me</label>
-        </p>
         <a href="/login">Already have an account ?</a>
       </fieldset>
     </form>
 
-    <script src="../public/scripts/SignUp.js"></script>
+    <script src="scripts/SignUp.js"></script>
   </body>
 </html>
+

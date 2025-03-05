@@ -2,8 +2,32 @@ const express = require('express');
 const path = require('path');
 const database = require('./data/database')
 const User = require('./models/User')
+const userController = require('./controller/user.controller');
+const propertyController = require('./controller/property.controller');
+const admin = require('firebase-admin');
+const multer = require('multer');
+const storage = multer.memoryStorage();
+const cloudinary = require('cloudinary').v2;
+const upload = multer({ storage: storage });
+const cookieParser = require('cookie-parser');
+
+const authenticateToken = require('./middlewares/authenticateToken');
+// 
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+//
 
 const app = express();
+app.use(cookieParser());
+app.use(express.json()); 
+
+
+cloudinary.config({
+    cloud_name: "dmyxuqajh",
+    api_key: "781152936351827",
+    api_secret: "n_Ahfsju5QPvigQ43FnTMIJzBQY",
+  });
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -17,42 +41,73 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup', {error: null, formData: {username: '', contactNo: '', email: '', password: '', city: '', confirmPassword: ''}, errorFields: []});
 })
 
-app.post('/signup', (req, res)=> {
-    const user = new User(req.body.username, req.body.contactNo, req.body.email, req.body.password, req.body.city);
-});
+app.post('/signup', userController.createAccountWithEmailAndPassword);
 
 app.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login', {success: true, error: null, errorFields: []});
 })
 
-app.get('/changePassword', (req, res)=> {
-    res.render('password');
-})
+app.post('/login', userController.loginWithEmailAndPassword);
 
-app.get('/otp', (req, res)=> {
-    res.render('otp');
-})
 
-app.get('/profile', (req, res)=> {
-    res.render('profile');
-})
+app.get('/changingPassword', authenticateToken, userController.changePass);
 
-app.get('/main', (req, res)=>{
-    res.render('mainPage');
-})
+app.get('/profile', userController.getUserById);
+app.post('/profile',  upload.single("profileImage"), userController.updateUserData);
+
+app.use(authenticateToken);
+app.get('/main', propertyController.getProperties);
 
 app.get('/emiCalculator', (req, res)=>{
     res.render('emiCalculator');
-})
+})  
 
 app.get('/postproperty', (req, res)=>{
     res.render('postproperty');
 })
 
+app.post('/postproperty', upload.array("imagesUploader", 10), propertyController.insertPropertyDataToDatabase);
+
+app.get('/main/filter', propertyController.getFilteredProperties)
+
+app.get('/card', (req, res)=>{
+    res.render('card');
+})
+
+app.get('/photo', (req, res)=>{
+    res.render('propertyPhoto');
+})
+
+app.post('/jwt', (req, res)=>{
+    const userEmail = req.email;
+    const userData = { email: userEmail };
+
+    const accessToken = jwt.sign(userData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+    res.json({accessToken: accessToken});
+});
+
+app.get('/property/:id', propertyController.showPropertyDetails)
+
+app.get('/card', (req, res)=> {
+    res.render('card');
+})
+
+app.get('/logout', (req, res)=> {
+    res.clearCookie('token', {
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+    });
+    res.redirect('/login')
+})
+
+
 database.connectToDatabase().then(
     ()=>app.listen(3000)
 ).catch((e)=>console.log("hi: "+ e)
 );
+
+

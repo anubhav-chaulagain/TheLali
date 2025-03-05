@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- <div class="image-box">
-            <img src="plant-image.jpg" alt="Plant Illustration" />
-        </div> -->
-        <div class="login-box">
-            <h2>Login</h2>
-            <form>
-                <div class="input-group">
-                    <label for="email"></label>
-                    <input type="email" id="email" placeholder="Username" required />
-                    <span class="icon">✉</span>
-                </div>
-                <div class="input-group">
-                    <label for="password"></label>
-                    <input type="password" id="password" placeholder="Password" required />
-                    <span class="icon"></span>
-                </div>
-                <button type="submit" class="login-btn">Login</button>
-            </form>
-            <div class="links">
-                <a href="/signup">Create an account</a>
-                <a href="/otp">Forgot password?</a>
-            </div>
+      <div class="login-box">
+        <h2>Login</h2>
+        <p id="error-message"><%= error %></p>
+        <form action="/login" method="POST">
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              name="email"
+              class="<%= errorFields && errorFields.includes('email') ? 'errorInput' : '' %>"
+              required
+            />
+            <span class="icon">✉</span>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              class="<%= errorFields && errorFields.includes('password') ? 'errorInput' : '' %>"
+              required
+            />
+            <span class="icon"></span>
+          </div>
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="links">
+          <a href="/signup">Create an account</a>
+          <a href="/otp">Forgot password?</a>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

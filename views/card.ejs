@@ -1,0 +1,16 @@
+
+  <div class="property-card">
+    <img src="<%= property.images[0] %>" alt="Property Image">
+    <div class="property-details">
+        <div class="property-title"><%= property.title %></div>
+        <div class="property-location"><%= property.address %></div>
+        <div class="property-description"><%= property.description.slice(0, 40)+"..." %></div>
+        <div class="property-features">
+            <span><%= property.parking %> Parking</span>
+            <span><%= property.purpose %></span>
+            <span><%= property.area %> sq. m</span>
+        </div>
+        <div class="property-price">Rs. <%= property.price %></div>
+        <a href="/property/<%= property.id %>"><button>View Details</button></a>
+    </div>
+</div>

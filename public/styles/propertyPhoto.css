@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+.add-property-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .add-property-photo-container h3 {
   margin: 10px;
   font-size: 1.4em;
@@ -31,4 +39,37 @@
 
 .photo-upload-section span {
   margin-bottom: 10px;
+}
+
+/*  */
+.image-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-list li {
+  border: 2px solid #d0c0c0;
+  border-radius: 4px;
+  font-style: italic;
+  padding: 1px 3px;
+  margin: 5px 2px;
+}
+
+.maxphoto-error {
+  border: 1.5px solid rgb(255, 88, 88);;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
+#maxphotoerror-message {
+  display: none;
+  color: rgb(255, 88, 88);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }

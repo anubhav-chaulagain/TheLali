@@ -8,23 +8,26 @@
   </head>
   <body>
     <div class="profile-page-container">
-      <div class="profile-photo">
-        <h2>Profile Photo</h2>
+      <form id="profile-details" action="/profile" method="post" enctype="multipart/form-data">
+        <div class="profile-photo">
+          <h2>Profile Details</h2>
 
-        <div class="photos">
-          <img src="/assets/icons/profile.png" alt="Default Profile" id="profile-pic" />
-
-          <label for="profile-image">Update Image</label>
-          <input
-            type="file"
-            accept="image/jpeg, image/png, image/jpg"
-            name="profile-image"
-            id="profile-image"
-          />
+          <div class="photos">
+            <label for="profile-image">
+              <img
+                src="<%= user.profileImg ? user.profileImg : "/assets/icons/profile.png"%>"
+                alt="Default Profile"
+                id="profile-pic"
+              />
+            </label>
+            <input
+              type="file"
+              name="profileImage"
+              id="profile-image"
+              accept="image/*"
+            />
+          </div>
         </div>
-      </div>
-      <form id="profile-details">
-        <h2>Profile Details</h2>
         <div class="form-element">
           <p>
             <label>Username </label>
@@ -33,17 +36,13 @@
               name="username"
               id="username"
               placeholder="Username"
+              value="<%= user.username%>"
             />
           </p>
 
           <p>
-            <label>Email </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email@gmail.com"
-            />
+            <label>City </label>
+            <input type="text" name="city" id="city" placeholder="Kathmandu" value="<%= user.city%>"/>
           </p>
 
           <p>
@@ -53,27 +52,17 @@
               name="phone"
               id="phone"
               placeholder="9876543210"
-            />
-          </p>
-
-          <p>
-            <label for="address">Address</label>
-            <input
-              type="text"
-              name="address"
-              id="address"
-              placeholder="Kathmandu"
+              value="<%= user.contactno%>"
             />
           </p>
         </div>
 
         <p id="bottom-navigation">
-          <a href="/otp">Change Password</a>
-          <button id="save-profile">Save Profile</button>
+          <a href="/changingPassword" id="change-password-btn">Change Password</a>
+          <button id="save-profile" type="submit">Save Profile</button>
         </p>
       </form>
     </div>
-
     <script>
       const profilePic = document.getElementById("profile-pic");
       const inputFile = document.getElementById("profile-image");
@@ -81,6 +70,8 @@
       inputFile.onchange = function () {
         profilePic.src = URL.createObjectURL(inputFile.files[0]);
       };
+
+      
     </script>
   </body>
 </html>

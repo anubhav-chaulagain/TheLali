@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Details</title>
+    <link rel="stylesheet" href="/styles/propertyDetails.css" />
+  </head>
+  <body>
+      <div class="section1-container">
+        <div class="property-images-carousel">
+          <%- include('propertyImgCarousel.ejs', {property: property}) %>
+        </div>
+  
+        <div class="property-owner-detail">
+          <div class="owner-details">
+            <div class="image-container">
+              <img src="/assets/icons/profile.png" alt="owner profile" />
+            </div>
+  
+            <div class="info">
+              <ul style="list-style-type: none">
+                <li><span>Contacting Email:</br></span><%= property.ownerEmail %></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="form-container">
+            <form id="contact-form">
+              <fieldset>
+                <h2>Contact For Enquiry</h2>
+                <p>
+                  <input
+                    type="text"
+                    name="fullname"
+                    id="fullname"
+                    placeholder="Enter Your full name"
+                    required
+                  />
+                </p>
+  
+                <p>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                  />
+                </p>
+  
+                <p>
+                  <input
+                    type="tel"
+                    name="contactNo"
+                    id="contactNo"
+                    placeholder="Enter your phone no"
+                    required
+                  />
+                </p>
+  
+                <p>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Enter your message here"
+                  ></textarea>
+                </p>
+  
+                <button type="submit" name="submit" id="submit">
+                  Send message
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+    <div class="propertyDetailsHero">
+      <div class="property-info">
+        <div class="info-title">
+          <!-- <h4>Property Id: 123123</h4> -->
+          <!-- <h4>Property Id: 123123</h4> -->
+          <!-- <h4>Property Id: 123123</h4> -->
+          <p id="property-title"><%= property.title %></p>
+  
+          <p id="property-location">
+            <span>
+              <img src="/assets/icons/location.svg" alt="location icon" />
+            </span>
+            <%= property.address %>
+          </p>
+        </div>
+  
+        <div class="price-section"><%= property.price %></div>
+      </div>
+  
+      <div class="property-features">
+        <ul>
+          <li>
+            <span><img src="/assets/icons/house-icon.png" /></span>
+            <div>
+              <h2><%= property.type %></h2>
+              <small>Type</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/land-area.png" /></span>
+            <div>
+              <h2><%= property.area %></h2>
+              <small>Area</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/bedroom-icon.png" /></span>
+            <div>
+              <h2><%= property.bedroom %></h2>
+              <small>Bedrooms</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/kitchen-icon.png" /></span>
+            <div>
+              <h2><%= property.kitchen %></h2>
+              <small>Kitchen</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/bathroom-icon.png" /></span>
+            <div>
+              <h2><%= property.bathroom %></h2>
+              <small>bathrooms</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/living-room-icon.png" /></span>
+            <div>
+              <h2><%= property.livingRoom %></h2>
+              <small>Living Room</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/parking-icon.png" /></span>
+            <div>
+              <h2><%= property.parking %></h2>
+              <small>Parking</small>
+            </div>
+          </li>
+  
+          <li>
+            <span><img src="/assets/icons/floor-icon.png" /></span>
+            <div>
+              <h2><%= property.totalFloors %></h2>
+              <small>Total Floors</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="property-details">
+        <h3>Property Details</h3>
+        <%= property.description %>
+      </div>
+  
+      <div class="property-overview">
+        <h3>Overview</h3>
+  
+        <div class="overview-info">
+          <ul>
+            <li><span>Property Type: </span> <%= property.type %></li>
+            <li><span>Property Face: </span> <%= property.facedirection %></li>
+            <li><span>Built year: </span><%= property.builtYear %>BS</li>
+            <li><span>Road Type: </span><%= property.roadtype %></li>
+            <li><span>Negotiable: </span><%= property.negoOptions %></li>
+            <li><span>Furnishing: </span><%= property.furnishing %></li>
+            <li><span>City and Area: </span><%= property.address %></li>
+            <li><span>Pricing: </span><%= property.price %></li>
+  
+            <li><span>Purpose: </span><%= property.purpose %></li>
+            <li><span>Property Area: </span><%= property.area %> sq. m</li>
+            <li><span>Road Access: </span><%= property.roadaccess %></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="property-youtube-video">
+        <header>
+          <h3>Watch Video</h3>
+        </header>
+        <iframe width="560" height="315" src="<%= property.videoUrl.replace('watch?v=', 'embed/') %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </body>
+</html>

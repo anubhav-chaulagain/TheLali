@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Password</title>
+  </head>
+  <style>
+    :root {
+      --color-primary-orange: rgb(255, 122, 0);
+      --color-primary-orange-light: rgb(255, 139, 31);
+
+      --color-text: rgb(74, 74, 74);
+      --color-text-hover: black;
+
+      --border-radius-small: 2px;
+      --border-radius-medium: 4px;
+      --border-radius-big: 8px;
+    }
+
+    body {
+      color: #222;
+      padding: 10px;
+      min-height: 100vh;
+      background: linear-gradient(to right, #d9a7c7, #fffcdc);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      height: max-content;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    a:hover {
+      color: rgb(47, 47, 47);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Password reset email has been sent to you email.</h1>
+      <a href="/login">Go to login</a>
+    </div>
+  </body>
+</html>
