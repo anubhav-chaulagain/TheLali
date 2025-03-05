@@ -58,12 +58,11 @@
         </div>
 
         <p id="bottom-navigation">
-          <a href="/otp">Change Password</a>
+          <a href="/changingPassword" id="change-password-btn">Change Password</a>
           <button id="save-profile" type="submit">Save Profile</button>
         </p>
       </form>
     </div>
-
     <script>
       const profilePic = document.getElementById("profile-pic");
       const inputFile = document.getElementById("profile-image");
@@ -71,6 +70,8 @@
       inputFile.onchange = function () {
         profilePic.src = URL.createObjectURL(inputFile.files[0]);
       };
+
+      
     </script>
   </body>
 </html>

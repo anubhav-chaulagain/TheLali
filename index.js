@@ -52,13 +52,8 @@ app.get('/login', (req, res) => {
 
 app.post('/login', userController.loginWithEmailAndPassword);
 
-app.get('/changePassword', (req, res)=> {
-    res.render('password');
-})
 
-app.get('/otp', (req, res)=> {
-    res.render('otp');
-})
+app.get('/changingPassword', authenticateToken, userController.changePass);
 
 app.get('/profile', userController.getUserById);
 app.post('/profile',  upload.single("profileImage"), userController.updateUserData);
@@ -75,6 +70,8 @@ app.get('/postproperty', (req, res)=>{
 })
 
 app.post('/postproperty', upload.array("imagesUploader", 10), propertyController.insertPropertyDataToDatabase);
+
+app.get('/main/filter', propertyController.getFilteredProperties)
 
 app.get('/card', (req, res)=>{
     res.render('card');

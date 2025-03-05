@@ -4,6 +4,7 @@ const User = require("../models/User");
 const cloudinary = require("cloudinary").v2;
 const admin = require("firebase-admin");
 const { getDatabase, ref, update } = require("firebase/database");
+const  { getAuth, sendPasswordResetEmail } = require("firebase/auth");
 
 async function createAccountWithEmailAndPassword(req, res) {
   const user = new User(
@@ -123,10 +124,27 @@ async function updateUserData(req, res) {
   }
 }
 
+async function changePass(req, res) {
+  const sendResetEmail = async (userEmail) => {
+    const auth = getAuth();
+    try {
+        await sendPasswordResetEmail(auth, userEmail);
+        console.log("Password reset email sent! Check your inbox.");
+    } catch (error) {
+        console.error("Error sending reset email:", error);
+        console.log(error.message);
+    }
+  };
+  const userEmail = req.userData.email;
+  sendResetEmail(userEmail);
+  res.render('passChanging')
+}
+
 
 module.exports = {
   createAccountWithEmailAndPassword: createAccountWithEmailAndPassword,
   loginWithEmailAndPassword: loginWithEmailAndPassword,
   getUserById: getUserById,
   updateUserData: updateUserData,
+  changePass: changePass
 };

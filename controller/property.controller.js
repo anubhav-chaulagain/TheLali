@@ -129,7 +129,44 @@ async function showPropertyDetails(req, res) {
   }
 }
 
+async function getFilteredProperties(req, res) {
+  try {
+    const db = getDatabase();
+    const propertiesRef = ref(db, "properties");
+    const snapshot = await get(propertiesRef);
+
+    if (!snapshot.exists()) {
+      return res.render("mainPage", { properties: [] });
+    }
+
+    const properties = snapshot.val();
+    let propertyList = Object.keys(properties).map((key) => ({
+      id: key,
+      ...properties[key],
+    }));
+
+    // Get filter parameters from the query string
+    const { filterType, filterLocation } = req.query;
+
+    // Apply filters if they are provided
+    if (filterType) {
+      propertyList = propertyList.filter((property) => property.category === filterType.toLowerCase());
+    }
+    if (filterLocation) {
+      propertyList = propertyList.filter((property) => property.city === filterLocation);
+    }
+
+    console.log("Filtered Properties:", propertyList);
+
+    res.render("mainPage", { properties: propertyList });
+  } catch (error) {
+    console.error("Error fetching properties:", error);
+    res.status(500).send("Error fetching properties");
+  }
+}
+
 module.exports = { insertPropertyDataToDatabase: insertPropertyDataToDatabase,
     getProperties: getProperties,
-    showPropertyDetails: showPropertyDetails
+    showPropertyDetails: showPropertyDetails,
+    getFilteredProperties: getFilteredProperties
  };

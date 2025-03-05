@@ -1,8 +1,8 @@
-<form class="filter">
+<form class="filter" action="/main/filter" method="get">
   <div class="type">
-    <button>Type<span class="arrow">&#9662;</span></button>
     <div class="content-type">
       <select name="filterType" id="filterType">
+        <option value="">Type</option>
         <option value="Land">Land</option>
         <option value="House">House</option>
         <option value="Flat">Flat</option>
@@ -11,13 +11,12 @@
     </div>
   </div>
   <div class="location">
-    <button>Location<span class="arrow">&#9662;</span></button>
     <div class="content-location">
       <select name="filterLocation" id="filterLocation">
+        <option value="">Location</option>
         <option value="Kathmandu">Kathmandu</option>
         <option value="Bhaktapur">Bhaktapur</option>
         <option value="Lalitpur">Lalitpur</option>
-        <option value="Apartment">Apartment</option>
       </select>
     </div>
   </div>
