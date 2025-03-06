@@ -10,6 +10,8 @@ const storage = multer.memoryStorage();
 const cloudinary = require('cloudinary').v2;
 const upload = multer({ storage: storage });
 const cookieParser = require('cookie-parser');
+const nodemailer = require('nodemailer');
+
 
 const authenticateToken = require('./middlewares/authenticateToken');
 // 
@@ -103,6 +105,34 @@ app.get('/logout', (req, res)=> {
     });
     res.redirect('/login')
 })
+
+app.post('/send-email', async (req, res) => {
+    const { fullname, email, contactNo, message } = req.body;
+  
+    // Create transporter
+    let transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER, // Your Gmail address
+        pass: process.env.EMAIL_PASS, // Your App Password (not your actual password)
+      },
+    });
+  
+    let mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER, // Your email
+      subject: "New Contact Form Submission",
+      text: `Name: ${fullname}\nEmail: ${email}\nPhone: ${contactNo}\n\nMessage:\n${message}`,
+    };
+  
+    try {
+      await transporter.sendMail(mailOptions);
+      res.redirect('/main');
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Failed to send email" });
+    }
+  })
 
 
 database.connectToDatabase().then(
